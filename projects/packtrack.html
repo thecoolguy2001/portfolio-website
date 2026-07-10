@@ -34,8 +34,20 @@
         </section>
 
         <div class="project-image">
-            <img src="../project images/PackTrack.png" alt="PackTrack" class="project-hero-image">
+            <video class="project-hero-video" autoplay muted loop playsinline disablePictureInPicture poster="../project images/PackTrack.png">
+                <source src="../project images/PackTrackVideo.mov" type="video/quicktime">
+                <source src="../project images/PackTrackVideo.mov" type="video/mp4">
+            </video>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.querySelector('.project-hero-video');
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => {});
+                }
+            });
+        </script>
 
         <!-- Meta -->
         <div class="project-meta">
