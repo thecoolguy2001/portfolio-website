@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <title>PackTrack - Demonte Walker</title>
+    <title>Pack Track - Demonte Walker</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project-styles.css">
 </head>
@@ -28,9 +28,9 @@
         <!-- Hero -->
         <section class="project-hero">
             <p class="project-hero-label">Flipper Zero App</p>
-            <h1 class="project-hero-title">PackTrack</h1>
-            <p class="project-hero-subtitle">Seamless parcel tracking on the Flipper Zero device, allowing users to check package statuses with no smartphone needed.</p>
-            <div class="project-status">Active Development</div>
+            <h1 class="project-hero-title">Pack Track</h1>
+            <p class="project-hero-subtitle">A native shipment tracker for the Flipper Zero — a clean, glanceable list of your packages, offline by default, with optional live tracking through any provider you choose.</p>
+            <div class="project-status">Complete</div>
         </section>
 
         <div class="project-image">
@@ -65,7 +65,7 @@
             </div>
             <div class="project-meta-item">
                 <h4>Tools</h4>
-                <p>Figma, Flipper Zero, API, GitHub</p>
+                <p>C, Flipper Zero SDK, FlipperHTTP, ufbt, GitHub</p>
             </div>
         </div>
 
@@ -77,8 +77,8 @@
                 <p class="feed-date">November 2025</p>
                 <div class="feed-card">
                     <h2>Results</h2>
-                    <p>PackTrack is teaching me how to balance embedded constraints with real-world utility. I'm refining skills in low-overhead HTTP communication and device-level UI design.</p>
-                    <p>Users appreciate the quick-glance functionality that eliminates the need to pull out a smartphone for simple delivery status checks.</p>
+                    <p>Pack Track is teaching me how to balance embedded constraints with real-world utility. I'm refining skills in low-overhead HTTP communication and device-level UI design.</p>
+                    <p>The result is a tracker that works with zero setup beyond a text file — no internet, no accounts, no backend — and grows into live API tracking for anyone with a devboard and their own key.</p>
                 </div>
             </article>
 
@@ -87,21 +87,21 @@
                 <p class="feed-date">September 2025</p>
                 <div class="feed-card">
                     <h2>Iterations</h2>
-                    <p>Refining the user interface and API communication for optimal performance on embedded hardware.</p>
+                    <p>Manual-first, then live — each mode complete on its own.</p>
 
                     <div class="feed-iterations">
                         <div class="iteration-card">
                             <span class="iteration-version">v2.0</span>
                             <div class="iteration-content">
-                                <h3>Multi-Carrier Support</h3>
-                                <p>Added support for multiple shipping carriers and improved status display formatting.</p>
+                                <h3>Live Refresh</h3>
+                                <p>Added optional live tracking: a Wi-Fi devboard running FlipperHTTP plus your own API key fetch real status for every package — no provider hardcoded.</p>
                             </div>
                         </div>
                         <div class="iteration-card">
                             <span class="iteration-version">v1.0</span>
                             <div class="iteration-content">
-                                <h3>Core Tracking</h3>
-                                <p>Implemented basic package tracking with single carrier support and simple status display.</p>
+                                <h3>Manual Tracker</h3>
+                                <p>A glanceable list and detail view driven by a plain packages.txt on the SD card — up to 12 packages, fully offline.</p>
                             </div>
                         </div>
                     </div>
@@ -119,8 +119,8 @@
                         <div class="feed-step">
                             <span class="feed-step-number">01</span>
                             <div class="feed-step-content">
-                                <h3>API Research</h3>
-                                <p>Identified shipping provider APIs that could work within Flipper Zero's connectivity constraints.</p>
+                                <h3>Provider Research</h3>
+                                <p>Surveyed tracking APIs (Ship24, AfterShip, TrackingMore, 17track) and landed on a provider-agnostic design — the user supplies the URL, key, and JSON fields.</p>
                             </div>
                         </div>
                         <div class="feed-step">
@@ -134,14 +134,14 @@
                             <span class="feed-step-number">03</span>
                             <div class="feed-step-content">
                                 <h3>Network Implementation</h3>
-                                <p>Built low-overhead HTTP communication routines for Wi-Fi devboard integration.</p>
+                                <p>Built a lightweight UART client for the FlipperHTTP devboard firmware — Wi-Fi connect and HTTP GET over GPIO at 115200 baud.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">04</span>
                             <div class="feed-step-content">
-                                <h3>Testing</h3>
-                                <p>Tested across multiple carriers and package types to ensure reliable tracking.</p>
+                                <h3>Host-Tested Utilities</h3>
+                                <p>The config parser, URL templating, and JSON field extraction are pure C — tested on the host before ever touching the device.</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Visual Design Direction</h2>
-                    <p>The Flipper Zero display is 128×64 pixels of monochrome — every pixel matters. The visual language for PackTrack is built on Flipper-native conventions so the app feels at home on the device, not like a transplant from a phone.</p>
+                    <p>The Flipper Zero display is 128×64 pixels of monochrome — every pixel matters. The visual language for Pack Track is built on Flipper-native conventions so the app feels at home on the device, not like a transplant from a phone.</p>
                     <div class="design-decisions">
                         <div class="decision-card">
                             <h4>Native Flipper grammar</h4>
@@ -161,15 +161,15 @@
                         </div>
                         <div class="decision-card">
                             <h4>Status word over status code</h4>
-                            <p>"Out for delivery" reads better than "DEPARTED 04A." Carrier codes get translated to plain language before they hit the screen.</p>
+                            <p>"Out for delivery" reads better than "DEPARTED 04A." Five plain statuses — pending, transit, out, delivered, exception — cover every package.</p>
                         </div>
                         <div class="decision-card">
-                            <h4>Glyphs for carriers</h4>
-                            <p>Tiny carrier logos (USPS, UPS, FedEx) render in monochrome bitmap so users identify packages at a glance.</p>
+                            <h4>Glyphs for status</h4>
+                            <p>Each status gets a tiny procedural glyph — filled dot delivered, ringed dot out for delivery, hollow ring in transit, dash pending, ✕ exception. No bitmap assets.</p>
                         </div>
                         <div class="decision-card">
-                            <h4>Loading is honest</h4>
-                            <p>HTTP calls take time on a Flipper — a clear "fetching…" line with a tiny spinner replaces silent waits, so users never think the device froze.</p>
+                            <h4>Refreshing is honest</h4>
+                            <p>HTTP calls take time on a Flipper — the header shows live progress ("Refreshing 2/5…") and plain results ("Updated", "No board found", "WiFi failed"), so it never looks frozen.</p>
                         </div>
                     </div>
                 </div>
@@ -200,21 +200,21 @@
                                 <div class="wf-callout" style="bottom:8px;left:8px;">4</div>
                             </div>
                         </div>
-                        <p class="wireframe-caption">Package detail — carrier glyph + status, big, instantly readable.</p>
+                        <p class="wireframe-caption">Package detail — status glyph + status, big, instantly readable.</p>
                     </div>
                     <div class="annotations">
                         <div class="annotation-item">
                             <span class="annotation-num">1</span>
                             <div class="annotation-text">
-                                <h4>Carrier glyph</h4>
-                                <p>Monochrome bitmap of the carrier logo. Even before reading, the user knows which package this is.</p>
+                                <h4>Status glyph</h4>
+                                <p>Drawn procedurally on the canvas — a filled dot, ring, or dash. Even before reading, the user knows where the package stands.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">2</span>
                             <div class="annotation-text">
-                                <h4>Refresh affordance</h4>
-                                <p>OK button refreshes from the API. Right arrow paginates between packages — same dpad logic as system apps.</p>
+                                <h4>Dpad affordances</h4>
+                                <p>In the list, RIGHT refreshes every package (live mode). In the detail view, LEFT/RIGHT page between shipments — same dpad logic as system apps.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
@@ -228,7 +228,7 @@
                             <span class="annotation-num">4</span>
                             <div class="annotation-text">
                                 <h4>Last-mile context</h4>
-                                <p>City + estimated arrival window. Two short lines — anything more wouldn't fit, and the user doesn't need it on a glance.</p>
+                                <p>Carrier, full tracking number, last reported location, and update time — anything more wouldn't fit, and the user doesn't need it on a glance.</p>
                             </div>
                         </div>
                     </div>
@@ -240,7 +240,7 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Solution</h2>
-                    <p>PackTrack connects to shipping provider APIs via the Flipper's Wi-Fi devboard to display delivery information at the push of a button.</p>
+                    <p>Pack Track is manual-first: your packages live in a plain packages.txt on the SD card and display instantly, fully offline. Add a Wi-Fi devboard running FlipperHTTP and your own tracking API key, and pressing RIGHT fetches live status for every package.</p>
 
                     <div class="feed-features">
                         <div class="feed-feature">
@@ -248,8 +248,8 @@
                             <p>View package status instantly without reaching for your phone.</p>
                         </div>
                         <div class="feed-feature">
-                            <h3>Multiple Carriers</h3>
-                            <p>Support for major shipping providers including USPS, UPS, and FedEx.</p>
+                            <h3>Provider-Agnostic</h3>
+                            <p>Nothing hosted, nothing hardcoded — point it at any tracking service with a URL, key, and JSON fields in config.txt.</p>
                         </div>
                         <div class="feed-feature">
                             <h3>Compact Display</h3>
@@ -284,7 +284,7 @@
                         <div class="flow-step">
                             <span class="flow-step-num">04</span>
                             <h4>Refresh</h4>
-                            <p>OK button hits API for fresh status.</p>
+                            <p>RIGHT fetches live status for all.</p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +295,7 @@
                 <p class="feed-date">June 2025</p>
                 <div class="feed-card">
                     <h2>Target Users</h2>
-                    <p>PackTrack is for the slice of Flipper Zero owners who want their device to do real, daily work — not just RF tricks. Two patterns drive the design.</p>
+                    <p>Pack Track is for the slice of Flipper Zero owners who want their device to do real, daily work — not just RF tricks. Two patterns drive the design.</p>
                     <div class="persona-grid">
                         <div class="persona-card">
                             <div class="persona-avatar">FT</div>
@@ -357,7 +357,7 @@
 
         <!-- CTA -->
         <section class="project-cta">
-            <h2>Explore PackTrack</h2>
+            <h2>Explore Pack Track</h2>
             <a href="https://github.com/thecoolguy2001/flipper-pack-track" class="btn-primary" target="_blank" rel="noopener">
                 Visit Project
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>

@@ -193,42 +193,43 @@ const projectData = {
         learned: "Mood Ring deepened my understanding of emotional design—how visual feedback can shape user experience on a subconscious level."
     },
     packtrack: {
-        title: "PackTrack",
+        title: "Pack Track",
         subtitle: "Flipper Zero App",
         role: "UI/UX Designer / App Developer",
         timeline: "June 2, 2025 → November 28, 2025",
-        tools: "API, CSS, Figma, Flipper Zero, Github, HTML, JS",
+        tools: "C, Flipper Zero SDK, FlipperHTTP, ufbt, Github",
         link: "https://github.com/thecoolguy2001/flipper-pack-track",
         page: "projects/packtrack.html",
-        summary: "The development of the Flipper Zero Package Tracker app aims to bring seamless parcel tracking to the Flipper Zero device, allowing users to check package statuses and receive updates directly with no smartphone needed!",
+        summary: "Pack Track is a native shipment tracker for the Flipper Zero — a clean, glanceable list of your packages on the 128×64 monochrome display. It's manual-first, driven by a plain text file on the SD card with no internet or accounts needed, and optionally goes live with a Wi-Fi devboard to fetch real tracking status.",
         problem: "Traditional package tracking requires a smartphone or computer to constantly go online to check their provider site for delivery information, creating friction when users just want a quick status glance.",
-        solution: "The solution was to create an application for the Flipper Zero that connects to your shipping provider to display delivery information at a push of a button!",
-        learned: "PackTrack is teaching me how to balance embedded constraints with real-world utility. I'm refining skills in low-overhead HTTP communication and device-level UI design."
+        solution: "Pack Track works two ways. Manual mode keeps the list in packages.txt on the SD card — no backend at all. Live mode uses a Wi-Fi devboard running FlipperHTTP plus your own tracking-service API key: no provider is hardcoded, so a config file points it at any service, and pressing RIGHT refreshes every package.",
+        learned: "Pack Track is teaching me how to balance embedded constraints with real-world utility — parsing config and JSON in pure, host-tested C, talking HTTP over a UART, and designing glanceable UI for a 128×64 monochrome screen."
     },
     roulette: {
         title: "Roulette",
         subtitle: "Flipper Zero App",
         role: "UI/UX Designer / App Developer",
         timeline: "June 2, 2025 → November 28, 2025",
-        tools: "API, CSS, Figma, Flipper Zero, Github, HTML, JS",
+        tools: "C, Flipper Zero SDK, ufbt, Github",
         link: "https://github.com/thecoolguy2001/flipper-roulette",
         page: "projects/roulette.html",
-        summary: "Roulette is a dramatic, sound-enhanced party game for the Flipper Zero, inspired by classic Russian Roulette but reimagined with digital suspense. Using the Flipper's button input, audio cues, and haptic feedback, the app creates tension and excitement.",
+        summary: "Roulette is a polished, single-screen revolver roulette game for the Flipper Zero, built natively as a FAP in under three hundred lines of C. A hand-drawn six-chamber cylinder, hardware-randomized bullet placement, multi-tone audio, vibration, and synchronized LED feedback deliver a tense, arcade-style game loop.",
         problem: "The Flipper Zero is widely known for its tools and hacking modules—but it lacks playful, high-stakes games that utilize the device's buzzer, screen, and input in a theatrical way.",
-        solution: "The solution is Roulette, a minimal game where each player 'pulls the trigger' by pressing the center button. A sound plays, tension builds… and either silence (survival) or a dramatic buzzer (you're out!) delivers the outcome.",
+        solution: "Each round hides the bullet in one of six chambers using the Flipper's on-die hardware random number generator, then advances the cylinder one position per trigger pull. A click gives a short haptic tap and ticks the survival counter; a bang ends the round with a full-screen flash, a low tone, the red LED, and a sustained vibration.",
         learned: "Roulette is teaching me how to build emotional feedback systems with almost no UI. The app has pushed my thinking on timing, pacing, and physical feedback."
     },
     battlepass: {
-        title: "Battle Pass",
+        title: "Pod",
         subtitle: "Flipper Zero App",
         role: "UI/UX Designer / App Developer",
         timeline: "June 2, 2025 → November 28, 2025",
-        tools: "API, CSS, Figma, Flipper Zero, Github, HTML, JS",
+        tools: "C, Flipper Zero SDK, Sub-GHz Radio, ufbt, Github",
+        link: "https://github.com/thecoolguy2001/flipper-pod",
         page: "projects/battlepass.html",
-        summary: "Battle Pass is a Flipper Zero app that turns passive encounters into live, stats-based battles—bringing a nostalgic, Nintendo-inspired twist to real-world interactions. Designed for Wi-Fi devboard scanning, the app detects nearby Flipper devices running the same app.",
+        summary: "Pod is a Flipper-to-Flipper encounter game played over the built-in sub-GHz radio — no add-on hardware. Carry your Flipper with Pod open and it quietly broadcasts your dolphin and listens for others; cross paths with another player and it logs the encounter, linger near each other and you can battle in a live 10-second tap race.",
         problem: "The Flipper Zero community thrives on interaction and creativity—but most peer-to-peer activity requires active input or hacking modules. There's no playful, automatic way for Flipper owners to recognize and 'battle' each other in the wild.",
-        solution: "Battle Pass turns every Wi-Fi scan into a chance for a quick-flash Flipper duel. Each user sets a nickname and hidden stats (strength, speed, defense), which are broadcast via the Wi-Fi devboard.",
-        learned: "This project is teaching me how to turn background wireless scanning into interactive storytelling."
+        solution: "While Walk Mode is open, Pod broadcasts a tiny calling card — your callsign, a random ID, and your real dolphin level — on 433.92 MHz and listens for others. Catching a beacon logs the encounter; if both players opt in, a battle starts: a 3-2-1 countdown, then mash OK for 10 seconds — most taps wins XP toward ranks from Minnow to Kraken.",
+        learned: "Pod is teaching me how to build a radio protocol from scratch — self-framed messages with CRC-8 and de-duplication over the Flipper's sub-GHz worker — and how to design a multiplayer handshake that could be host-tested before two devices ever met."
     },
     arfilter: {
         title: "AR Filter Games",

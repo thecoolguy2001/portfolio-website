@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <title>Battle Pass - Demonte Walker</title>
+    <title>Pod - Demonte Walker</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project-styles.css">
 </head>
@@ -28,14 +28,26 @@
         <!-- Hero -->
         <section class="project-hero">
             <p class="project-hero-label">Flipper Zero App</p>
-            <h1 class="project-hero-title">Battle Pass</h1>
-            <p class="project-hero-subtitle">A Nintendo StreetPass-inspired app that turns passive encounters into live, stats-based battles between Flipper devices.</p>
-            <div class="project-status">Active Development</div>
+            <h1 class="project-hero-title">Pod</h1>
+            <p class="project-hero-subtitle">A Flipper-to-Flipper encounter game over sub-GHz radio &mdash; cross paths to log encounters, then battle in a live 10-second tap race. No add-on hardware required.</p>
+            <div class="project-status">Complete</div>
         </section>
 
         <div class="project-image">
-            <img src="../project images/BattlePass.png" alt="Battle Pass" class="project-hero-image">
+            <video class="project-hero-video" autoplay muted loop playsinline disablePictureInPicture poster="../project images/BattlePass.png">
+                <source src="../project images/PodVideo.mov" type="video/quicktime">
+                <source src="../project images/PodVideo.mov" type="video/mp4">
+            </video>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.querySelector('.project-hero-video');
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => {});
+                }
+            });
+        </script>
 
         <!-- Meta -->
         <div class="project-meta">
@@ -53,7 +65,7 @@
             </div>
             <div class="project-meta-item">
                 <h4>Tools</h4>
-                <p>Figma, Flipper Zero, API, GitHub</p>
+                <p>C, Flipper Zero SDK, Sub-GHz Radio, ufbt, GitHub</p>
             </div>
         </div>
 
@@ -65,8 +77,8 @@
                 <p class="feed-date">November 2025</p>
                 <div class="feed-card">
                     <h2>Results</h2>
-                    <p>This project is teaching me how to turn background wireless scanning into interactive storytelling. Battle Pass demonstrates how passive technology can create social connections.</p>
-                    <p>The Flipper community has shown enthusiasm for bringing StreetPass-style interactions to the platform.</p>
+                    <p>Pod is teaching me how to turn background radio scanning into interactive storytelling — and how to build a wireless protocol I could trust before two devices ever met: the wire format is host-tested for round-tripping and CRC rejection.</p>
+                    <p>Real two-device battles are implemented and coded to the protocol; the live round-trip is being shaken out with a second Flipper. Until then, Practice mode lets anyone play the tap race against a simulated opponent.</p>
                 </div>
             </article>
 
@@ -75,21 +87,21 @@
                 <p class="feed-date">September 2025</p>
                 <div class="feed-card">
                     <h2>Iterations</h2>
-                    <p>Refining the battle system and encounter detection for reliable peer-to-peer interaction.</p>
+                    <p>Building up from passive presence to live head-to-head play.</p>
 
                     <div class="feed-iterations">
                         <div class="iteration-card">
                             <span class="iteration-version">v2.0</span>
                             <div class="iteration-content">
-                                <h3>Battle History</h3>
-                                <p>Added encounter logs and battle history so users can review past duels.</p>
+                                <h3>Live Battles &amp; Ranks</h3>
+                                <p>Added the opt-in challenge handshake, the 10-second tap race, and XP with ranks from Minnow up to Kraken.</p>
                             </div>
                         </div>
                         <div class="iteration-card">
                             <span class="iteration-version">v1.0</span>
                             <div class="iteration-content">
-                                <h3>Core Battle System</h3>
-                                <p>Implemented basic stats broadcasting and auto-battle resolution on encounter.</p>
+                                <h3>Beacons &amp; Encounters</h3>
+                                <p>Implemented the sub-GHz calling-card broadcast and the passive encounter log — cross paths and it’s recorded, up to 64 rivals deep.</p>
                             </div>
                         </div>
                     </div>
@@ -108,28 +120,28 @@
                             <span class="feed-step-number">01</span>
                             <div class="feed-step-content">
                                 <h3>Concept Research</h3>
-                                <p>Studied Nintendo StreetPass and similar passive multiplayer systems for inspiration.</p>
+                                <p>Studied passive multiplayer and proximity-based encounter systems for inspiration.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">02</span>
                             <div class="feed-step-content">
                                 <h3>Protocol Design</h3>
-                                <p>Designed the data broadcast format for nickname and stats transmission.</p>
+                                <p>Designed self-framed radio messages — a 1-byte type, CRC-8, and de-duplication — for beacons and the challenge/accept/tap exchange.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">03</span>
                             <div class="feed-step-content">
                                 <h3>Battle Mechanics</h3>
-                                <p>Created a simple but engaging stats-based battle resolution system.</p>
+                                <p>Designed the live duel: both players opt in, a 3-2-1 countdown fires, then it’s a 10-second OK-mashing tap race — most taps wins and earns XP.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">04</span>
                             <div class="feed-step-content">
-                                <h3>Community Testing</h3>
-                                <p>Tested with Flipper community members to validate the encounter experience.</p>
+                                <h3>Host-Tested Protocol</h3>
+                                <p>Validated the wire format on the host — round-tripping and CRC rejection — and built Practice mode so the battle game is playable with a single Flipper.</p>
                             </div>
                         </div>
                     </div>
@@ -141,23 +153,23 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Visual Design Direction</h2>
-                    <p>Battle Pass leans into game-boy / handheld nostalgia — pixel-art glyphs, stat bars, and chunky type. The visual language signals "game" the moment a Flipper boots into it.</p>
+                    <p>Pod leans into retro handheld nostalgia — pixel-art glyphs, chunky type, and the Flipper’s own dolphin as your identity. The visual language signals "game" the moment a Flipper boots into it.</p>
                     <div class="design-decisions">
                         <div class="decision-card">
-                            <h4>Pixel-art avatar</h4>
-                            <p>Each player is represented by a small monochrome sprite. Stats determine subtle differences in posture so duels feel personalized.</p>
+                            <h4>Your dolphin is your fighter</h4>
+                            <p>Your real dolphin level seeds your beacon and battles — but Pod never touches the actual pet. Game progress lives in its own save on the SD card.</p>
                         </div>
                         <div class="decision-card">
-                            <h4>Bars over numbers</h4>
-                            <p>Stats render as horizontal bars. Battles play out visually — bars drain in real time so the round feels like a fight, not a calculation.</p>
+                            <h4>The tap race is theater</h4>
+                            <p>A 3-2-1 countdown, ten frantic seconds of OK-mashing, then the verdict. The battle is physical — whoever taps fastest wins.</p>
                         </div>
                         <div class="decision-card">
-                            <h4>Encounter notification</h4>
-                            <p>Detection of another Flipper plays a short buzzer sting and flashes the screen — the device demands attention without lifting the user out.</p>
+                            <h4>Walk Mode is a radar</h4>
+                            <p>Leave it open as you move around — it broadcasts your calling card every few seconds and lists who’s in range. Press OK to challenge.</p>
                         </div>
                         <div class="decision-card">
-                            <h4>Verdict animation</h4>
-                            <p>Win, loss, draw each get a distinct screen sequence — half-second of theater that makes the result land.</p>
+                            <h4>Ranks worth chasing</h4>
+                            <p>Wins and XP climb a ladder of sea creatures — Minnow, Guppy, Tuna, Dolphin, Orca, Kraken — persisted on the SD card between sessions.</p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +180,7 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Wireframes &amp; Annotations</h2>
-                    <p>The battle screen is the central surface — encounter triggers it automatically. Wireframe shows that screen mid-fight: two players, two stat bars, one outcome.</p>
+                    <p>The battle screen is the central surface — an accepted challenge drops both players into it. Wireframe shows that screen mid-race: two callsigns, two tap counts, ten seconds on the clock.</p>
                     <div class="wireframe">
                         <div class="wireframe-frame" style="max-width:280px;margin:0 auto;border:8px solid #f5a800;border-radius:14px;background:#a4d11e;">
                             <div class="wireframe-screen" style="min-height:170px;background:#a4d11e;padding:8px;color:#1a2a05;font-family:monospace;gap:6px;">
@@ -193,35 +205,35 @@
                                 <div class="wf-callout" style="bottom:8px;left:50%;transform:translateX(-50%);">4</div>
                             </div>
                         </div>
-                        <p class="wireframe-caption">Battle screen — two players, stat bars, sprite avatars, single verdict line.</p>
+                        <p class="wireframe-caption">Battle screen — two callsigns, live tap counts, and the verdict banner.</p>
                     </div>
                     <div class="annotations">
                         <div class="annotation-item">
                             <span class="annotation-num">1</span>
                             <div class="annotation-text">
-                                <h4>Player nicknames</h4>
-                                <p>You vs them. Your nickname always renders left so you read your own status first — the screen orientation is consistent across encounters.</p>
+                                <h4>Callsigns</h4>
+                                <p>You vs them. Your callsign always renders left so you read your own status first — the screen orientation is consistent across battles.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">2</span>
                             <div class="annotation-text">
-                                <h4>Stat bars in real time</h4>
-                                <p>Bars drain visibly as the auto-battle resolves. Even though the math is instant, the animation makes it feel like a fight, not a verdict.</p>
+                                <h4>Tap counts in real time</h4>
+                                <p>Both counters climb live during the 10-second race, and final tap counts are exchanged over the radio at the end to decide the winner.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">3</span>
                             <div class="annotation-text">
-                                <h4>Sprite avatars</h4>
-                                <p>Each player gets a pixel-art figure tied to their stat distribution. Tall, short, wide — visual personality at a glance.</p>
+                                <h4>Countdown &amp; timer</h4>
+                                <p>A 3-2-1 countdown starts every duel, then the 10-second clock runs down. No taps count before the gun.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">4</span>
                             <div class="annotation-text">
                                 <h4>Verdict banner</h4>
-                                <p>"FIGHT!" → "WIN!" / "LOSS." / "DRAW." Inverted bar fills the bottom so the outcome lands with screen-wide weight.</p>
+                                <p>"FIGHT!" → "WIN!" or "LOSS." with the XP earned. An inverted bar fills the bottom so the outcome lands with screen-wide weight.</p>
                             </div>
                         </div>
                     </div>
@@ -233,20 +245,20 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Solution</h2>
-                    <p>Battle Pass turns every Wi-Fi scan into a chance for a quick-flash Flipper duel. Each user sets a nickname and hidden stats (strength, speed, defense), which are broadcast via the Wi-Fi devboard.</p>
+                    <p>Pod uses the Flipper’s built-in sub-GHz radio — no add-on hardware. While Walk Mode is open, it broadcasts a tiny calling card (your callsign, a random ID, and your dolphin level) on 433.92 MHz every few seconds, and listens for others.</p>
 
                     <div class="feed-features">
                         <div class="feed-feature">
-                            <h3>Custom Profile</h3>
-                            <p>Set your nickname and allocate stats for strength, speed, and defense.</p>
+                            <h3>No Extra Hardware</h3>
+                            <p>Runs on the Flipper’s built-in sub-GHz radio at 433.92 MHz — you just need two Flippers to play for real.</p>
                         </div>
                         <div class="feed-feature">
-                            <h3>Auto-Detection</h3>
-                            <p>Automatically detects nearby Flipper devices running Battle Pass.</p>
+                            <h3>Passive Encounters</h3>
+                            <p>Catching someone’s beacon logs the encounter automatically — with battle results, XP, and "seen X ago."</p>
                         </div>
                         <div class="feed-feature">
-                            <h3>Quick Battles</h3>
-                            <p>Instant stats-based duels resolve automatically on encounter.</p>
+                            <h3>Opt-In Tap Battles</h3>
+                            <p>One player challenges, the other accepts — then it’s a live 10-second tap race for XP and rank.</p>
                         </div>
                     </div>
                 </div>
@@ -257,32 +269,32 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Core User Flow</h2>
-                    <p>The point of a passive multiplayer system is that most of the flow is invisible. Battle Pass runs in the background — the user only sees it when something interesting happens.</p>
+                    <p>The point of a passive multiplayer system is that most of the flow is invisible. Pod runs in the background — the user only sees it when something interesting happens.</p>
                     <div class="user-flow">
                         <div class="flow-step">
                             <span class="flow-step-num">01</span>
                             <h4>Setup</h4>
-                            <p>Pick nickname, allocate stats.</p>
+                            <p>Pick your callsign in Profile.</p>
                         </div>
                         <div class="flow-step">
                             <span class="flow-step-num">02</span>
                             <h4>Walk</h4>
-                            <p>App scans wirelessly in the background.</p>
+                            <p>Walk Mode beacons and listens.</p>
                         </div>
                         <div class="flow-step">
                             <span class="flow-step-num">03</span>
                             <h4>Encounter</h4>
-                            <p>Another Flipper detected — buzzer alerts.</p>
+                            <p>Crossing paths logs the meeting.</p>
                         </div>
                         <div class="flow-step">
                             <span class="flow-step-num">04</span>
                             <h4>Battle</h4>
-                            <p>Auto-resolves with animated bars.</p>
+                            <p>Challenge, accept, mash OK for 10s.</p>
                         </div>
                         <div class="flow-step">
                             <span class="flow-step-num">05</span>
-                            <h4>Log</h4>
-                            <p>Encounter recorded in history.</p>
+                            <h4>Rank Up</h4>
+                            <p>XP climbs from Minnow to Kraken.</p>
                         </div>
                     </div>
                 </div>
@@ -293,7 +305,7 @@
                 <p class="feed-date">June 2025</p>
                 <div class="feed-card">
                     <h2>Target Users</h2>
-                    <p>Battle Pass is built for the social side of the Flipper community — people who already attend meetups, conferences, and hardware events where Flippers are commonly carried.</p>
+                    <p>Pod is built for the social side of the Flipper community — people who already attend meetups, conferences, and hardware events where Flippers are commonly carried.</p>
                     <div class="persona-grid">
                         <div class="persona-card">
                             <div class="persona-avatar">CG</div>
@@ -312,9 +324,9 @@
                             </ul>
                         </div>
                         <div class="persona-card">
-                            <div class="persona-avatar">SN</div>
-                            <h3>The StreetPass Nostalgic</h3>
-                            <p class="persona-tagline">Misses Nintendo's StreetPass and wants that feeling back</p>
+                            <div class="persona-avatar">PN</div>
+                            <h3>The Passive-Play Nostalgic</h3>
+                            <p class="persona-tagline">Misses the golden age of passive handheld encounters and wants that feeling back</p>
                             <p class="persona-section-label">Goals</p>
                             <ul class="persona-traits">
                                 <li>Passive multiplayer that respects their time</li>
@@ -323,7 +335,7 @@
                             </ul>
                             <p class="persona-section-label">Pain Points</p>
                             <ul class="persona-traits">
-                                <li>StreetPass is dead, nothing has replaced it</li>
+                                <li>Passive encounter play died out and nothing has replaced it</li>
                                 <li>Modern multiplayer demands constant attention</li>
                             </ul>
                         </div>
@@ -337,7 +349,7 @@
                 <div class="feed-card">
                     <h2>Problem</h2>
                     <p>The Flipper Zero community thrives on interaction and creativity, but most peer-to-peer activity requires active input or hacking modules. There's no playful, automatic way for Flipper owners to recognize and battle each other in the wild.</p>
-                    <p>The challenge was creating a social gaming experience using passive wireless scanning.</p>
+                    <p>The challenge was creating a social gaming experience using only hardware every Flipper already has — the built-in sub-GHz radio.</p>
                 </div>
             </article>
 
@@ -346,8 +358,8 @@
                 <p class="feed-date">June 2025</p>
                 <div class="feed-card-plain">
                     <h2>Project Started</h2>
-                    <p>Battle Pass is a Flipper Zero app that turns passive encounters into live, stats-based battles, bringing a nostalgic, Nintendo-inspired twist to real-world interactions.</p>
-                    <p>Designed for Wi-Fi devboard scanning, the app detects nearby Flipper devices running the same app and initiates automatic battles.</p>
+                    <p>Pod is a Flipper Zero app that turns passive encounters into live battles, bringing a nostalgic, retro-gaming twist to real-world interactions.</p>
+                    <p>Built on the Flipper’s built-in sub-GHz radio, it quietly broadcasts your dolphin, logs everyone you cross paths with, and lets two players who linger near each other battle it out — best at meetups, cons, and hackerspaces where Flippers gather.</p>
                 </div>
             </article>
 
@@ -355,9 +367,9 @@
 
         <!-- CTA -->
         <section class="project-cta">
-            <h2>Explore Battle Pass</h2>
-            <a href="../index.html#projects" class="btn-primary">
-                View All Projects
+            <h2>Explore Pod</h2>
+            <a href="https://github.com/thecoolguy2001/flipper-pod" class="btn-primary" target="_blank" rel="noopener">
+                Visit Project
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
         </section>

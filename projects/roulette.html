@@ -30,7 +30,7 @@
             <p class="project-hero-label">Flipper Zero App</p>
             <h1 class="project-hero-title">Roulette</h1>
             <p class="project-hero-subtitle">A dramatic, sound-enhanced party game for the Flipper Zero, inspired by classic Russian Roulette reimagined with digital suspense.</p>
-            <div class="project-status">Active Development</div>
+            <div class="project-status">Complete</div>
         </section>
 
         <div class="project-image">
@@ -65,7 +65,7 @@
             </div>
             <div class="project-meta-item">
                 <h4>Tools</h4>
-                <p>Figma, Flipper Zero, GitHub</p>
+                <p>C, Flipper Zero SDK, ufbt, GitHub</p>
             </div>
         </div>
 
@@ -93,15 +93,15 @@
                         <div class="iteration-card">
                             <span class="iteration-version">v2.0</span>
                             <div class="iteration-content">
-                                <h3>Enhanced Drama</h3>
-                                <p>Added variable timing delays and improved sound effects for heightened suspense.</p>
+                                <h3>Multimodal Feedback</h3>
+                                <p>Layered notification sequences — a haptic tap on a safe pull, red LED + low tone + extended vibration on a bang, and a two-note arpeggio on a re-spin.</p>
                             </div>
                         </div>
                         <div class="iteration-card">
                             <span class="iteration-version">v1.0</span>
                             <div class="iteration-content">
                                 <h3>Core Gameplay</h3>
-                                <p>Implemented basic trigger mechanism with random outcome generation and buzzer feedback.</p>
+                                <p>Implemented the trigger loop as a five-screen state machine — Title, Ready, Click, Bang, Spin — with hardware-randomized bullet placement.</p>
                             </div>
                         </div>
                     </div>
@@ -134,14 +134,14 @@
                             <span class="feed-step-number">03</span>
                             <div class="feed-step-content">
                                 <h3>Timing Refinement</h3>
-                                <p>Fine-tuned the delay intervals to optimize suspense and unpredictability.</p>
+                                <p>Tuned the timed transition screens — roughly 2.5 seconds for clicks and spins, 5 for a bang — and locked input during animations so nobody mashes through the feedback.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">04</span>
                             <div class="feed-step-content">
-                                <h3>Playtesting</h3>
-                                <p>Tested with groups to validate the emotional impact and entertainment value.</p>
+                                <h3>Hardware Randomness</h3>
+                                <p>Sourced bullet placement from the Flipper’s on-die true random number generator, so every spin is non-deterministic and unpredictable across reboots.</p>
                             </div>
                         </div>
                     </div>
@@ -156,8 +156,8 @@
                     <p>Most of the experience is audio and silence — the screen is the smallest part of Roulette. The visual language was tuned to add to suspense without distracting from it.</p>
                     <div class="design-decisions">
                         <div class="decision-card">
-                            <h4>Big icon, no chrome</h4>
-                            <p>One central glyph dominates the screen — a chamber, a trigger. Negative space carries the tension.</p>
+                            <h4>Procedural cylinder</h4>
+                            <p>The six-chamber cylinder is drawn live from polar coordinates — active chamber filled solid, the rest outlined — so the rotation state reads at a glance.</p>
                         </div>
                         <div class="decision-card">
                             <h4>Audio is the lead</h4>
@@ -200,15 +200,15 @@
                         <div class="annotation-item">
                             <span class="annotation-num">1</span>
                             <div class="annotation-text">
-                                <h4>Round counter</h4>
-                                <p>Tells players how far in they are — small enough to ignore but visible to settle disputes.</p>
+                                <h4>Survival counter</h4>
+                                <p>A running "Survived" count — small enough to ignore, visible enough to settle disputes, and it becomes the final score on a bang.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">2</span>
                             <div class="annotation-text">
                                 <h4>Chamber visual</h4>
-                                <p>A single glyph fills the center of the screen. The visual stays still — the audio carries the suspense.</p>
+                                <p>The parametrically-drawn cylinder fills the center, advancing one chamber per pull. Left or right re-spins it anytime.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
@@ -227,7 +227,7 @@
                 <p class="feed-date">July 2025</p>
                 <div class="feed-card">
                     <h2>Solution</h2>
-                    <p>Roulette is a minimal game where each player pulls the trigger by pressing the center button. A sound plays, tension builds, and either silence (survival) or a dramatic buzzer (you're out!) delivers the outcome.</p>
+                    <p>Each round hides the bullet in one of six chambers using the Flipper’s hardware random number generator, then advances the cylinder one position per trigger pull. A click is a short haptic tap and a tick of the survival counter; a bang is a full-screen flash, a low tone, the red status LED, and a sustained vibration.</p>
 
                     <div class="feed-features">
                         <div class="feed-feature">
@@ -235,12 +235,12 @@
                             <p>One button to play. Press the center button to pull the trigger.</p>
                         </div>
                         <div class="feed-feature">
-                            <h3>Audio Tension</h3>
-                            <p>Sound builds suspense before revealing the outcome.</p>
+                            <h3>True Randomness</h3>
+                            <p>Bullet placement comes from the on-die hardware RNG — every spin is unpredictable.</p>
                         </div>
                         <div class="feed-feature">
-                            <h3>Dramatic Feedback</h3>
-                            <p>Clear audio distinction between survival and elimination.</p>
+                            <h3>Full-Sensory Verdict</h3>
+                            <p>Sound, light, and vibration land together — a click and a bang feel nothing alike.</p>
                         </div>
                     </div>
                 </div>
@@ -266,7 +266,7 @@
                         <div class="flow-step">
                             <span class="flow-step-num">03</span>
                             <h4>Wait</h4>
-                            <p>Variable suspense window.</p>
+                            <p>Timed animation — input locked.</p>
                         </div>
                         <div class="flow-step">
                             <span class="flow-step-num">04</span>
