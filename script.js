@@ -218,14 +218,14 @@ const projectData = {
         solution: "Each round hides the bullet in one of six chambers using the Flipper's on-die hardware random number generator, then advances the cylinder one position per trigger pull. A click gives a short haptic tap and ticks the survival counter; a bang ends the round with a full-screen flash, a low tone, the red LED, and a sustained vibration.",
         learned: "Roulette is teaching me how to build emotional feedback systems with almost no UI. The app has pushed my thinking on timing, pacing, and physical feedback."
     },
-    battlepass: {
+    pod: {
         title: "Pod",
         subtitle: "Flipper Zero App",
         role: "UI/UX Designer / App Developer",
         timeline: "June 2, 2025 → November 28, 2025",
         tools: "C, Flipper Zero SDK, Sub-GHz Radio, ufbt, Github",
         link: "https://github.com/thecoolguy2001/flipper-pod",
-        page: "projects/battlepass.html",
+        page: "projects/pod.html",
         summary: "Pod is a Flipper-to-Flipper encounter game played over the built-in sub-GHz radio — no add-on hardware. Carry your Flipper with Pod open and it quietly broadcasts your dolphin and listens for others; cross paths with another player and it logs the encounter, linger near each other and you can battle in a live 10-second tap race.",
         problem: "The Flipper Zero community thrives on interaction and creativity—but most peer-to-peer activity requires active input or hacking modules. There's no playful, automatic way for Flipper owners to recognize and 'battle' each other in the wild.",
         solution: "While Walk Mode is open, Pod broadcasts a tiny calling card — your callsign, a random ID, and your real dolphin level — on 433.92 MHz and listens for others. Catching a beacon logs the encounter; if both players opt in, a battle starts: a 3-2-1 countdown, then mash OK for 10 seconds — most taps wins XP toward ranks from Minnow to Kraken.",
