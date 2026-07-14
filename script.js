@@ -254,6 +254,18 @@ const projectData = {
         problem: "Today's home assistants — Alexa, Google Home, Siri — are limited. They live in walled-garden ecosystems, send most queries to the cloud, can't see or reason about their environment, and can't perform agentic multi-step tasks. There's no easily-extensible home assistant that combines local privacy, vision, and the ability to act as a true agent.",
         solution: "LE pairs a Raspberry Pi with a Camera Module 3, USB microphone, and USB speaker to handle input/output. A local LLM handles everyday queries on-device; a local vision LLM gives LE visual intelligence through the camera. A routing system escalates more demanding commands to a cloud AI of choice. The interface mixes a face UI for personality with a mirror UI for at-a-glance information.",
         learned: "This project is just getting started — work began April 14, 2026 — and I'll be adding more in-depth details soon as the system matures, including specifics on the local model stack, vision pipeline, agent loop, and hardware build."
+    },
+    thirtyforthirty: {
+        title: "#30for30",
+        subtitle: "Daily Web Project Challenge",
+        role: "Designer / Developer",
+        timeline: "June 1, 2026 → June 30, 2026",
+        tools: "JavaScript, Canvas, WebGPU, WebXR, three.js, MediaPipe, transformers.js, Chrome Prompt API, WebRTC, Web Speech, Web Audio, Node, React",
+        page: "projects/thirtyforthirty.html",
+        summary: "#30for30 is a month-long challenge I set for myself in June: design, build, and ship one web project every single day, for 30 days straight. The thirty experiments range from a million-button toy to an AR séance with a local LLM, a ship you sail by blowing into your mic, on-device AI tools where nothing ever uploads, and a game you play by resizing your browser window.",
+        problem: "Tutorials and long-term projects only exercise a narrow slice of web development. I wanted a forcing function that would push me through the breadth of web technologies — and make me a faster, more confident developer by building constantly instead of occasionally.",
+        solution: "A hard daily deadline. Every day in June I scoped, designed, and shipped a small web project, deliberately rotating through different corners of the platform — on-device AI (WebGPU, Chrome's Prompt API), AR (WebXR), computer vision (MediaPipe, COCO-SSD), multi-device play (WebRTC), and unconventional inputs like breath, body pose, browser zoom, and window size. Ideas that failed were scrapped and replaced; thirty still had to ship.",
+        learned: "The browser is drastically more capable than most sites let on — I shipped local LLMs, AR, real physics, and multi-device play with only one project of the thirty needing a server. Daily shipping also taught me ruthless scoping, and that killing a failing idea fast is cheaper than rescuing it: two builds got scrapped mid-month and replaced."
     }
 };
 

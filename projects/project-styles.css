@@ -238,6 +238,24 @@
     margin-bottom: 0;
 }
 
+.feed-feature-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.feed-feature-links a {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.feed-feature-links a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
 /* Process Steps in Feed */
 .feed-steps {
     margin-top: 24px;
