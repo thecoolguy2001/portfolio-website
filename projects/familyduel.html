@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <title>Family Duel - Demonte Walker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#projects" class="project-nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+        </a>
+        <a href="../index.html" class="project-nav-logo">
+            <img src="../portfolio_logo.png" alt="DW Logo">
+        </a>
+        <div style="width: 60px;"></div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-hero-label">Apple TV Game</p>
+            <h1 class="project-hero-title">Family Duel</h1>
+            <p class="project-hero-subtitle">A living-room trivia duel — two teams face off on the big screen, buzzing in from their own phones to answer survey-style questions before the clock runs out.</p>
+            <div class="project-status">Active Development</div>
+        </section>
+
+        <!-- Project Image Placeholder -->
+        <div class="project-image">
+            <div class="project-image-placeholder" style="background: linear-gradient(135deg, #2b0a3d 0%, #6a3093 50%, #a044ff 100%);">
+                Family Duel
+            </div>
+        </div>
+
+        <!-- Meta -->
+        <div class="project-meta">
+            <div class="project-meta-item">
+                <h4>Role</h4>
+                <p>Founder / Game Designer / tvOS Developer</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Timeline</h4>
+                <p>April 2026 - Present</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Team</h4>
+                <p>Demonte Walker</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Tools</h4>
+                <p>Swift, SwiftUI, tvOS, GameController, Multipeer Connectivity, Xcode, Figma</p>
+            </div>
+        </div>
+
+        <!-- Feed -->
+        <div class="project-feed">
+
+            <!-- In Progress -->
+            <article class="feed-entry">
+                <p class="feed-date">In Progress</p>
+                <div class="feed-card">
+                    <h2>More Coming Soon</h2>
+                    <p>Family Duel is still under active development. The core buzz-in loop and phone-as-controller pairing are working end to end; remaining work is rounding out the question bank, tuning the steal mechanic, and polishing the TV-side presentation for a full game night.</p>
+                </div>
+            </article>
+
+            <!-- Core Loop -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card">
+                    <h2>Core Loop</h2>
+                    <p>Two teams — Family A and Family B — sit around the TV. Each round, a survey-style question appears on screen; whichever team buzzes in first from their phone gets first crack at naming a top answer. Guess wrong and the other team can steal the points by matching one of the remaining answers.</p>
+
+                    <div class="feed-features">
+                        <div class="feed-feature">
+                            <h3>Phone as buzzer</h3>
+                            <p>Every player's iPhone connects over the local network and doubles as a low-latency buzzer — no extra hardware required.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Survey-style questions</h3>
+                            <p>Answers are ranked by popularity rather than binary right/wrong, rewarding teams that can predict what most people would say.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Steal mechanic</h3>
+                            <p>A wrong guess hands the remaining points to the other team if they can land one more matching answer — keeping both teams engaged every round.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>TV as the shared screen</h3>
+                            <p>The Apple TV owns the score, timer, and reveal animations so the whole room is watching the same thing at once.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Companion App as Controller -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card">
+                    <h2>Phones as Controllers</h2>
+                    <p>A single Siri Remote can't serve two competing teams, so Family Duel routes input through a lightweight companion layer instead — every player's phone joins the game as its own buzzer over Multipeer Connectivity, with the Apple TV acting as host.</p>
+                    <div class="design-decisions">
+                        <div class="decision-card">
+                            <h4>No app install friction</h4>
+                            <p>Joining a game is built to feel like joining a Wi-Fi network, not downloading and configuring a separate app before play can start.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>One buzzer, one job</h4>
+                            <p>The phone screen during a round shows nothing but a big buzz button — all the game state lives on the TV where everyone can see it.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Design Decisions -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card">
+                    <h2>Design Decisions</h2>
+                    <p>Everything on the TV side is designed for a couch, not a desk — legible from across the room, with almost nothing that needs to be read up close.</p>
+                    <div class="design-decisions">
+                        <div class="decision-card">
+                            <h4>10-foot UI</h4>
+                            <p>Oversized type, high contrast, and generous spacing throughout — every screen is designed to be read from a couch, not a desk.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Team color, not player color</h4>
+                            <p>Every visual cue ties back to Team A or Team B rather than individual players, keeping the on-screen state simple even as players join or drop out mid-game.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Host controls stay off-screen</h4>
+                            <p>Game setup and question packs are managed from a phone before the round starts, keeping the TV screen free of menus once play begins.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Wireframe -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card">
+                    <h2>Wireframe &amp; Annotations</h2>
+                    <p>The round screen is the heart of the experience — the question, the answer board, and both teams' scores all have to read instantly from across the room.</p>
+                    <div class="wireframe">
+                        <div class="wireframe-frame browser">
+                            <div class="wireframe-screen" style="min-height:320px;background:#1a0a2e;color:white;padding:24px;gap:16px;">
+                                <div class="wf-block fill center" style="background:rgba(160,68,255,0.15);color:#c79bff;min-height:60px;">Question</div>
+                                <div class="wf-row" style="gap:8px;flex:1;">
+                                    <div class="wf-block" style="background:#2b1547;height:32px;border-radius:6px;flex:1;"></div>
+                                    <div class="wf-block" style="background:#2b1547;height:32px;border-radius:6px;flex:1;"></div>
+                                </div>
+                                <div class="wf-row" style="align-items:center;gap:10px;">
+                                    <div class="wf-block" style="background:#6a3093;color:white;padding:8px;text-align:center;font-size:0.7rem;font-weight:700;border-radius:6px;flex:1;">TEAM A · 240</div>
+                                    <div class="wf-block" style="background:#a044ff;color:white;padding:8px;text-align:center;font-size:0.7rem;font-weight:700;border-radius:6px;flex:1;">TEAM B · 180</div>
+                                </div>
+                                <div class="wf-callout" style="top:14px;left:50%;transform:translateX(-50%);">1</div>
+                                <div class="wf-callout" style="top:52%;left:14px;">2</div>
+                                <div class="wf-callout" style="bottom:14px;left:50%;transform:translateX(-50%);">3</div>
+                            </div>
+                        </div>
+                        <p class="wireframe-caption">Round screen — question banner, revealed answer board, and the live team scoreboard.</p>
+                    </div>
+                    <div class="annotations">
+                        <div class="annotation-item">
+                            <span class="annotation-num">1</span>
+                            <div class="annotation-text">
+                                <h4>Question banner</h4>
+                                <p>Large and centered — the first thing every player reads when a round starts.</p>
+                            </div>
+                        </div>
+                        <div class="annotation-item">
+                            <span class="annotation-num">2</span>
+                            <div class="annotation-text">
+                                <h4>Answer board</h4>
+                                <p>Survey answers flip face-up as they're guessed, the same beat as the format this game draws from.</p>
+                            </div>
+                        </div>
+                        <div class="annotation-item">
+                            <span class="annotation-num">3</span>
+                            <div class="annotation-text">
+                                <h4>Live scoreboard</h4>
+                                <p>Team-colored, always visible — no menu dive required to check who's ahead.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Problem -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card">
+                    <h2>Problem</h2>
+                    <p>Apple TV has almost no local multiplayer party games built for a room full of people. The single Siri Remote makes head-to-head competition awkward, and there's no built-in way to give two teams their own buzzer without extra hardware.</p>
+                </div>
+            </article>
+
+            <!-- Project Start -->
+            <article class="feed-entry">
+                <p class="feed-date">April 2026</p>
+                <div class="feed-card-plain">
+                    <h2>Project Started</h2>
+                    <p>Family Duel began as an attempt to bring a proper local multiplayer party game to the living room — two teams, phones as buzzers, and the TV running the show. Core buzz-in and pairing came together first; the question bank and presentation polish are ongoing.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CTA -->
+        <section class="project-cta">
+            <h2>More on Family Duel coming soon</h2>
+            <a href="../index.html#projects" class="btn-primary">
+                Back to Projects
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/demonte-walker-83506017b/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/thecoolguy2001" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:demontewalker12@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy;2026 Demonte Walker. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

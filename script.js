@@ -120,6 +120,30 @@ const projectData = {
         solution: "The solution was to create four core product lines which are Framer Themes, Shopify Themes, AI Automation Kits, and Email Design Services. Each service is sold as a fixed-price download with clear documentation.",
         learned: "Building Amaze Web taught me how to turn early client feedback and market research into a clear and scalable product strategy."
     },
+    familyduel: {
+        title: "Family Duel",
+        subtitle: "Apple TV Game",
+        role: "Founder / Game Designer / tvOS Developer",
+        timeline: "April 2026 → Present",
+        tools: "Swift, SwiftUI, tvOS, GameController, Multipeer Connectivity, Xcode, Figma",
+        page: "projects/familyduel.html",
+        summary: "Family Duel is a living-room party game for Apple TV — two teams face off on the big screen, buzzing in from their own phones to answer survey-style questions before the clock runs out. Built for game night, not a single player alone on a couch.",
+        problem: "Apple TV has almost no local multiplayer party games built for a room full of people, and the single Siri Remote makes head-to-head competition awkward — there's no good way to give two teams their own buzzer.",
+        solution: "Family Duel turns each player's iPhone into a wireless buzzer over the local network, while the TV runs the show — question, timer, and score for the whole room to see. Survey-style questions reward reading the room as much as knowing the answer.",
+        learned: "Family Duel is teaching me how to design for the 10-foot living-room experience and how to treat a phone as a lightweight game controller instead of the primary screen."
+    },
+    sphererun: {
+        title: "SphereRun",
+        subtitle: "iOS Game",
+        role: "Founder / Game Designer / iOS Developer",
+        timeline: "July 2026 → Present",
+        tools: "Swift, SwiftUI, SceneKit, CoreMotion, GameKit, Xcode",
+        page: "projects/sphererun.html",
+        summary: "SphereRun is a tilt-controlled endless runner — steer a rolling sphere down a procedurally generated course, dodge gaps and obstacles, and grab boosts as the track keeps accelerating. Started two weeks ago and closing in on a finished build.",
+        problem: "One-thumb, tilt-only games are easy to describe but hard to make feel good — most either steer too twitchy to trust or too sluggish to feel exciting as speed ramps up.",
+        solution: "SphereRun maps CoreMotion tilt directly to lateral sphere movement with smoothing tuned specifically for one-handed play, layers in a procedural track generator so no two runs repeat, and uses GameKit leaderboards to give runs something to chase.",
+        learned: "SphereRun is teaching me how much of a runner's feel comes down to input smoothing and difficulty ramp tuning rather than the core mechanic itself."
+    },
     creator: {
         title: "Creator Website",
         subtitle: "Portfolio Website",
