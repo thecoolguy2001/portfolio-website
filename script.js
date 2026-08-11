@@ -84,28 +84,28 @@ const projectData = {
     },
     quicker: {
         title: "QuickER",
-        subtitle: "Health Mobile App",
+        subtitle: "UI/UX Exploration",
         role: "UI/UX Designer / Mobile App Developer",
         timeline: "May 2, 2023 → July 31, 2023",
         tools: "Figma, Flutter",
         link: "https://www.figma.com/proto/8mJG0q1QBuP3NEiucSJlK2/D%5E2K?node-id=77-8&starting-point-node-id=77%3A8",
         page: "projects/quicker.html",
-        summary: "The development of QuickER aimed to streamline the emergency room (ER) experience for patients and healthcare providers. The project focused on reducing wait times, improving patient satisfaction, and optimizing the intake process in hospitals through a user-friendly mobile application.",
-        problem: "Patients with non-life-threatening conditions often face long wait times and a cumbersome intake process in emergency rooms. This results in patient dissatisfaction and inefficiencies for healthcare providers.",
-        solution: "QuickER provides a digital platform for patients to check in to the ER remotely. By offering a seamless and efficient intake process, QuickER helps patients secure their place in the queue before arriving at the hospital.",
-        learned: "Through this project, I learned the importance of user-centered design and iterative development. The experience taught me how to effectively gather and incorporate user feedback to create a product that meets the needs of its users."
+        summary: "QuickER was a small-team UI/UX exploration into what a remote ER check-in experience could look like, developed with the same rigor as a real product: two teammates led patient and provider interviews, real usability testing shaped each iteration, and I carried the design into a working cross-platform Flutter prototype.",
+        problem: "Patients with non-life-threatening conditions often face long wait times and a cumbersome intake process in emergency rooms — we wanted to see whether a remote check-in flow could realistically ease that, and what building and validating one would actually take.",
+        solution: "Designed a remote check-in flow — intake form, queue position, ETA, depart prompt — informed by the team's interviews and validated through real usability testing, then built it out as a working Flutter prototype for iOS and Android. The process ran like a real product development cycle: research, iterate, test, refine.",
+        learned: "QuickER taught me how to fold real user and provider research and usability testing into design decisions, and how to run a design process with the same discipline as a real production team even when the end goal is exploration rather than a commercial launch."
     },
     peerpair: {
         title: "PeerPair",
-        subtitle: "Mobile App",
+        subtitle: "UI/UX Exploration",
         role: "UI/UX Designer / Mobile App Developer",
         timeline: "July 10, 2023 → July 31, 2023",
         tools: "API, Flutter, Github, Swift",
         page: "projects/peerpair.html",
-        summary: "The development of the TikMatch app aimed to create a unique platform that matches users based on their TikTok activity and preferences. The project focused on leveraging user-generated content to facilitate connections and provide a fun and engaging user experience.",
-        problem: "The challenge was to develop an app that could effectively match users based on their TikTok activity, ensuring a seamless and enjoyable experience.",
-        solution: "The solution involved developing the TikMatch app with a focus on user-generated content and activity. The app utilized TikTok's API to gather user data and created a matching algorithm to connect users with similar interests.",
-        learned: "The experience helped me further my ability in thinking outside the box in terms of not only UI/UX design but Product Design as well."
+        summary: "PeerPair was a self-directed UI/UX exploration, run with the same rigor as a real product cycle — design, build, and real usability testing — to see what it'd take to create a TikTok-based matchmaking app end to end. Over three weeks I designed the flow, then built and tested it twice: once in Flutter, once natively in Swift, to compare the two toolchains on a real, testable product instead of a tutorial.",
+        problem: "The question wasn't whether the app could find users — it was whether content-based matching (pairing people by what they actually watch, not a written bio) could be designed, built, and validated with real usability testing in a short, self-directed timeframe.",
+        solution: "Designed the full flow — TikTok connection, content-based matching, swipe-stack cards, basic chat — then built it twice to compare approaches: a cross-platform Flutter build, followed by a native Swift/Xcode build. Each reached a working, user-tested state before development wrapped; the goal was the full development experience, not a commercial launch.",
+        learned: "Building the same product twice, in two different stacks, and testing both with real users, surfaced tradeoffs that reading documentation alone never would — and it sharpened both my UI/UX design and mobile development instincts at once."
     },
     amazeweb: {
         title: "Amaze Web",
