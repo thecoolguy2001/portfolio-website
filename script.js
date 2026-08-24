@@ -291,6 +291,18 @@ const projectData = {
         problem: "Tutorials and long-term projects only exercise a narrow slice of web development. I wanted a forcing function that would push me through the breadth of web technologies — and make me a faster, more confident developer by building constantly instead of occasionally.",
         solution: "A hard daily deadline. Every day in June I scoped, designed, and shipped a small web project, deliberately rotating through different corners of the platform — on-device AI (WebGPU, Chrome's Prompt API), AR (WebXR), computer vision (MediaPipe, COCO-SSD), multi-device play (WebRTC), and unconventional inputs like breath, body pose, browser zoom, and window size. Ideas that failed were scrapped and replaced; thirty still had to ship.",
         learned: "The browser is drastically more capable than most sites let on — I shipped local LLMs, AR, real physics, and multi-device play with only one project of the thirty needing a server. Daily shipping also taught me ruthless scoping, and that killing a failing idea fast is cheaper than rescuing it: two builds got scrapped mid-month and replaced."
+    },
+    huntar: {
+        title: "HuntAR",
+        subtitle: "AR Game",
+        role: "Founder / Game Designer / iOS Developer",
+        timeline: "August 2026 → Present",
+        tools: "RealityKit, ARKit, SwiftUI",
+        page: "projects/huntar.html",
+        summary: "HuntAR is a modern AR reimagining of the classic light-gun hunting game. RealityKit scans the player's real environment and populates it with ducks, and the phone itself becomes the lightgun — move it to aim, tap to fire.",
+        problem: "Classic light-gun games like Duck Hunt never made the jump to modern hardware — most remakes are flat touchscreen ports that lose the physical act of aiming at something.",
+        solution: "An ARKit and RealityKit-powered hunting game that places ducks directly in the player's real environment, turning the phone itself into the lightgun.",
+        learned: "This project is just getting started — work began August 2026 — and I'll be adding more in-depth details soon as the AR spawning, aiming, and scoring systems mature."
     }
 };
 
