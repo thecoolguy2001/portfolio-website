@@ -50,7 +50,6 @@ const projectData = {
         role: "UI/UX Designer / Web Developer Intern",
         timeline: "February 12, 2024 → May 20, 2024",
         tools: "CSS, Figma, Github, HTML, JS, Wordpress",
-        link: "https://vosyn.ai/",
         page: "projects/vosyn.html",
         summary: "The redesign of the Vosyn website aimed to elevate the tech startup's website with industry-leading design and enhanced user engagement. The project focused on creating visually appealing and user-friendly interfaces, driving user sign-ups, and increasing interest in the company's products and career opportunities.",
         problem: "Vosyn's previous website lacked the modern design elements and user-friendly features necessary to attract and retain users. The main issues included ineffective call-to-actions, outdated design aesthetics, and insufficient information on key pages.",
