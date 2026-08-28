@@ -35,10 +35,20 @@
 
         <!-- Project Image Placeholder -->
         <div class="project-image">
-            <div class="project-image-placeholder" style="background: linear-gradient(135deg, #0f2027 0%, #11998e 50%, #38ef7d 100%);">
-                SphereRun
-            </div>
+            <video class="project-hero-video" autoplay muted loop playsinline disablePictureInPicture poster="../project images/SphereRun.png">
+                <source src="../project images/SphereRunVideo.mov" type="video/quicktime">
+                <source src="../project images/SphereRunVideo.mov" type="video/mp4">
+            </video>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.querySelector('.project-hero-video');
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => {});
+                }
+            });
+        </script>
 
         <!-- Meta -->
         <div class="project-meta">

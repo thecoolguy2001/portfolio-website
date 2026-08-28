@@ -35,10 +35,20 @@
 
         <!-- Project Image Placeholder -->
         <div class="project-image">
-            <div class="project-image-placeholder" style="background: linear-gradient(135deg, #1e4620 0%, #6b8e23 50%, #f4d03f 100%);">
-                HuntAR
-            </div>
+            <video class="project-hero-video" autoplay muted loop playsinline disablePictureInPicture poster="../project images/HuntAR.png">
+                <source src="../project images/HuntARVideo.mov" type="video/quicktime">
+                <source src="../project images/HuntARVideo.mov" type="video/mp4">
+            </video>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.querySelector('.project-hero-video');
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => {});
+                }
+            });
+        </script>
 
         <!-- Meta -->
         <div class="project-meta">
