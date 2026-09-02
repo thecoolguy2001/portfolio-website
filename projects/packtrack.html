@@ -29,7 +29,7 @@
         <section class="project-hero">
             <p class="project-hero-label">Flipper Zero App</p>
             <h1 class="project-hero-title">Pack Track</h1>
-            <p class="project-hero-subtitle">A native shipment tracker for the Flipper Zero — a clean, glanceable list of your packages, offline by default, with optional live tracking through any provider you choose.</p>
+            <p class="project-hero-subtitle">A native shipment tracker for the Flipper Zero - a clean, glanceable list of your packages, offline by default, with optional live tracking through any provider you choose.</p>
             <div class="project-status">Complete</div>
         </section>
 
@@ -93,7 +93,7 @@
                 <div class="feed-card">
                     <h2>Results</h2>
                     <p>Pack Track is teaching me how to balance embedded constraints with real-world utility. I'm refining skills in low-overhead HTTP communication and device-level UI design.</p>
-                    <p>The result is a tracker that works with zero setup beyond a text file — no internet, no accounts, no backend — and grows into live API tracking for anyone with a devboard and their own key.</p>
+                    <p>The result is a tracker that works with zero setup beyond a text file - no internet, no accounts, no backend - and grows into live API tracking for anyone with a devboard and their own key.</p>
                 </div>
             </article>
 
@@ -102,21 +102,21 @@
                 <p class="feed-date">June 25, 2025</p>
                 <div class="feed-card">
                     <h2>Iterations</h2>
-                    <p>Manual-first, then live — each mode complete on its own.</p>
+                    <p>Manual-first, then live - each mode complete on its own.</p>
 
                     <div class="feed-iterations">
                         <div class="iteration-card">
                             <span class="iteration-version">v2.0</span>
                             <div class="iteration-content">
                                 <h3>Live Refresh</h3>
-                                <p>Added optional live tracking: a Wi-Fi devboard running FlipperHTTP plus your own API key fetch real status for every package — no provider hardcoded.</p>
+                                <p>Added optional live tracking: a Wi-Fi devboard running FlipperHTTP plus your own API key fetch real status for every package - no provider hardcoded.</p>
                             </div>
                         </div>
                         <div class="iteration-card">
                             <span class="iteration-version">v1.0</span>
                             <div class="iteration-content">
                                 <h3>Manual Tracker</h3>
-                                <p>A glanceable list and detail view driven by a plain packages.txt on the SD card — up to 12 packages, fully offline.</p>
+                                <p>A glanceable list and detail view driven by a plain packages.txt on the SD card - up to 12 packages, fully offline.</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                             <span class="feed-step-number">01</span>
                             <div class="feed-step-content">
                                 <h3>Provider Research</h3>
-                                <p>Surveyed tracking APIs (Ship24, AfterShip, TrackingMore, 17track) and landed on a provider-agnostic design — the user supplies the URL, key, and JSON fields.</p>
+                                <p>Surveyed tracking APIs (Ship24, AfterShip, TrackingMore, 17track) and landed on a provider-agnostic design - the user supplies the URL, key, and JSON fields.</p>
                             </div>
                         </div>
                         <div class="feed-step">
@@ -149,14 +149,14 @@
                             <span class="feed-step-number">03</span>
                             <div class="feed-step-content">
                                 <h3>Network Implementation</h3>
-                                <p>Built a lightweight UART client for the FlipperHTTP devboard firmware — Wi-Fi connect and HTTP GET over GPIO at 115200 baud.</p>
+                                <p>Built a lightweight UART client for the FlipperHTTP devboard firmware - Wi-Fi connect and HTTP GET over GPIO at 115200 baud.</p>
                             </div>
                         </div>
                         <div class="feed-step">
                             <span class="feed-step-number">04</span>
                             <div class="feed-step-content">
                                 <h3>Host-Tested Utilities</h3>
-                                <p>The config parser, URL templating, and JSON field extraction are pure C — tested on the host before ever touching the device.</p>
+                                <p>The config parser, URL templating, and JSON field extraction are pure C - tested on the host before ever touching the device.</p>
                             </div>
                         </div>
                     </div>
@@ -168,23 +168,23 @@
                 <p class="feed-date">June 19, 2025</p>
                 <div class="feed-card">
                     <h2>Visual Design Direction</h2>
-                    <p>The Flipper Zero display is 128×64 pixels of monochrome — every pixel matters. The visual language for Pack Track is built on Flipper-native conventions so the app feels at home on the device, not like a transplant from a phone.</p>
+                    <p>The Flipper Zero display is 128×64 pixels of monochrome - every pixel matters. The visual language for Pack Track is built on Flipper-native conventions so the app feels at home on the device, not like a transplant from a phone.</p>
                     <div class="design-decisions">
                         <div class="decision-card">
                             <h4>Native Flipper grammar</h4>
-                            <p>List-driven menus, dpad navigation, single-line headers — match the system apps so users don't relearn anything.</p>
+                            <p>List-driven menus, dpad navigation, single-line headers - match the system apps so users don't relearn anything.</p>
                         </div>
                         <div class="decision-card">
                             <h4>Status word over status code</h4>
-                            <p>"Out for delivery" reads better than "DEPARTED 04A." Five plain statuses — pending, transit, out, delivered, exception — cover every package.</p>
+                            <p>"Out for delivery" reads better than "DEPARTED 04A." Five plain statuses - pending, transit, out, delivered, exception - cover every package.</p>
                         </div>
                         <div class="decision-card">
                             <h4>Glyphs for status</h4>
-                            <p>Each status gets a tiny procedural glyph — filled dot delivered, ringed dot out for delivery, hollow ring in transit, dash pending, ✕ exception. No bitmap assets.</p>
+                            <p>Each status gets a tiny procedural glyph - filled dot delivered, ringed dot out for delivery, hollow ring in transit, dash pending, ✕ exception. No bitmap assets.</p>
                         </div>
                         <div class="decision-card">
                             <h4>Refreshing is honest</h4>
-                            <p>HTTP calls take time on a Flipper — the header shows live progress ("Refreshing 2/5…") and plain results ("Updated", "No board found", "WiFi failed"), so it never looks frozen.</p>
+                            <p>HTTP calls take time on a Flipper - the header shows live progress ("Refreshing 2/5…") and plain results ("Updated", "No board found", "WiFi failed"), so it never looks frozen.</p>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                 <p class="feed-date">June 16, 2025</p>
                 <div class="feed-card">
                     <h2>Wireframes &amp; Annotations</h2>
-                    <p>Two key screens — package list and package detail. Wireframe shows the detail view, where the device delivers the actual answer the user came for.</p>
+                    <p>Two key screens - package list and package detail. Wireframe shows the detail view, where the device delivers the actual answer the user came for.</p>
                     <div class="wireframe">
                         <div class="wireframe-frame" style="max-width:280px;margin:0 auto;border:8px solid #f5a800;border-radius:14px;background:#a4d11e;">
                             <div class="wireframe-screen" style="min-height:180px;background:#a4d11e;padding:8px;color:#1a2a05;font-family:monospace;">
@@ -215,21 +215,21 @@
                                 <div class="wf-callout" style="bottom:8px;left:8px;">4</div>
                             </div>
                         </div>
-                        <p class="wireframe-caption">Package detail — status glyph + status, big, instantly readable.</p>
+                        <p class="wireframe-caption">Package detail - status glyph + status, big, instantly readable.</p>
                     </div>
                     <div class="annotations">
                         <div class="annotation-item">
                             <span class="annotation-num">1</span>
                             <div class="annotation-text">
                                 <h4>Status glyph</h4>
-                                <p>Drawn procedurally on the canvas — a filled dot, ring, or dash. Even before reading, the user knows where the package stands.</p>
+                                <p>Drawn procedurally on the canvas - a filled dot, ring, or dash. Even before reading, the user knows where the package stands.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
                             <span class="annotation-num">2</span>
                             <div class="annotation-text">
                                 <h4>Dpad affordances</h4>
-                                <p>In the list, RIGHT refreshes every package (live mode). In the detail view, LEFT/RIGHT page between shipments — same dpad logic as system apps.</p>
+                                <p>In the list, RIGHT refreshes every package (live mode). In the detail view, LEFT/RIGHT page between shipments - same dpad logic as system apps.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
@@ -243,7 +243,7 @@
                             <span class="annotation-num">4</span>
                             <div class="annotation-text">
                                 <h4>Last-mile context</h4>
-                                <p>Carrier, full tracking number, last reported location, and update time — anything more wouldn't fit, and the user doesn't need it on a glance.</p>
+                                <p>Carrier, full tracking number, last reported location, and update time - anything more wouldn't fit, and the user doesn't need it on a glance.</p>
                             </div>
                         </div>
                     </div>
@@ -264,7 +264,7 @@
                         </div>
                         <div class="feed-feature">
                             <h3>Provider-Agnostic</h3>
-                            <p>Nothing hosted, nothing hardcoded — point it at any tracking service with a URL, key, and JSON fields in config.txt.</p>
+                            <p>Nothing hosted, nothing hardcoded - point it at any tracking service with a URL, key, and JSON fields in config.txt.</p>
                         </div>
                         <div class="feed-feature">
                             <h3>Compact Display</h3>
@@ -279,7 +279,7 @@
                 <p class="feed-date">June 9, 2025</p>
                 <div class="feed-card">
                     <h2>Core User Flow</h2>
-                    <p>The Flipper sits on a desk or in a pocket. The flow has to deliver value with minimum keystrokes — anyone who'd reach for their phone instead would just reach for their phone instead.</p>
+                    <p>The Flipper sits on a desk or in a pocket. The flow has to deliver value with minimum keystrokes - anyone who'd reach for their phone instead would just reach for their phone instead.</p>
                     <div class="user-flow">
                         <div class="flow-step">
                             <span class="flow-step-num">01</span>
@@ -310,7 +310,7 @@
                 <p class="feed-date">June 6, 2025</p>
                 <div class="feed-card">
                     <h2>Target Users</h2>
-                    <p>Pack Track is for the slice of Flipper Zero owners who want their device to do real, daily work — not just RF tricks. Two patterns drive the design.</p>
+                    <p>Pack Track is for the slice of Flipper Zero owners who want their device to do real, daily work - not just RF tricks. Two patterns drive the design.</p>
                     <div class="persona-grid">
                         <div class="persona-card">
                             <div class="persona-avatar">FT</div>

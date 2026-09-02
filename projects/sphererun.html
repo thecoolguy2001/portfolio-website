@@ -29,7 +29,7 @@
         <section class="project-hero">
             <p class="project-hero-label">iOS Game</p>
             <h1 class="project-hero-title">SphereRun</h1>
-            <p class="project-hero-subtitle">A tilt-controlled endless runner — steer a rolling sphere down a procedurally generated course, dodge gaps and obstacles, and grab boosts as the track keeps accelerating.</p>
+            <p class="project-hero-subtitle">A tilt-controlled endless runner - steer a rolling sphere down a procedurally generated course, dodge gaps and obstacles, and grab boosts as the track keeps accelerating.</p>
             <div class="project-status">Active Development</div>
         </section>
 
@@ -93,7 +93,7 @@
                 <p class="feed-date">In Progress</p>
                 <div class="feed-card">
                     <h2>Two Weeks In, Closing In on Done</h2>
-                    <p>SphereRun started two weeks ago and is already close to a finished build — the core loop, tilt controls, and procedural track generator are all in place. What's left is playtesting the difficulty ramp, polishing the boost and obstacle variety, and pulling together App Store screenshots and copy.</p>
+                    <p>SphereRun started two weeks ago and is already close to a finished build - the core loop, tilt controls, and procedural track generator are all in place. What's left is playtesting the difficulty ramp, polishing the boost and obstacle variety, and pulling together App Store screenshots and copy.</p>
                 </div>
             </article>
 
@@ -102,7 +102,7 @@
                 <p class="feed-date">July 2026</p>
                 <div class="feed-card">
                     <h2>Core Loop</h2>
-                    <p>SphereRun is a one-thumb game — no thumb required at all, in fact. Tilt the phone to steer a rolling sphere left and right down a narrow track that keeps scrolling forward and speeding up. Miss a jump or clip an obstacle and the run ends; boost orbs along the way reward tight lines with a temporary speed burst.</p>
+                    <p>SphereRun is a one-thumb game - no thumb required at all, in fact. Tilt the phone to steer a rolling sphere left and right down a narrow track that keeps scrolling forward and speeding up. Miss a jump or clip an obstacle and the run ends; boost orbs along the way reward tight lines with a temporary speed burst.</p>
 
                     <div class="feed-features">
                         <div class="feed-feature">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="feed-feature">
                             <h3>Procedural track generator</h3>
-                            <p>Course segments — straightaways, gaps, obstacle clusters, boost lanes — are assembled at runtime so no two runs repeat.</p>
+                            <p>Course segments - straightaways, gaps, obstacle clusters, boost lanes - are assembled at runtime so no two runs repeat.</p>
                         </div>
                         <div class="feed-feature">
                             <h3>Escalating speed</h3>
@@ -130,11 +130,11 @@
                 <p class="feed-date">July 2026</p>
                 <div class="feed-card">
                     <h2>Design Decisions</h2>
-                    <p>One mechanic, tuned hard, beats several half-tuned ones — the whole design budget for SphereRun went into making tilt steering and speed ramp feel right.</p>
+                    <p>One mechanic, tuned hard, beats several half-tuned ones - the whole design budget for SphereRun went into making tilt steering and speed ramp feel right.</p>
                     <div class="design-decisions">
                         <div class="decision-card">
                             <h4>Tilt only, no taps</h4>
-                            <p>Jumping happens automatically at marked gaps rather than on a tap — keeping both hands free and the input surface to a single axis.</p>
+                            <p>Jumping happens automatically at marked gaps rather than on a tap - keeping both hands free and the input surface to a single axis.</p>
                         </div>
                         <div class="decision-card">
                             <h4>Smoothing over raw sensitivity</h4>
@@ -142,7 +142,7 @@
                         </div>
                         <div class="decision-card">
                             <h4>Speed as the difficulty knob</h4>
-                            <p>Rather than hand-authoring harder levels, the track generator stays constant and global scroll speed ramps over time — simpler to build, and it reads as "the game is testing you," not "the game changed."</p>
+                            <p>Rather than hand-authoring harder levels, the track generator stays constant and global scroll speed ramps over time - simpler to build, and it reads as "the game is testing you," not "the game changed."</p>
                         </div>
                         <div class="decision-card">
                             <h4>Runs stay short</h4>
@@ -157,7 +157,7 @@
                 <p class="feed-date">July 2026</p>
                 <div class="feed-card">
                     <h2>Wireframe &amp; Annotations</h2>
-                    <p>The run screen has to stay out of the way — the sphere and the track are the interface. Wireframe shows the in-run HUD layout.</p>
+                    <p>The run screen has to stay out of the way - the sphere and the track are the interface. Wireframe shows the in-run HUD layout.</p>
                     <div class="wireframe">
                         <div class="wireframe-frame browser">
                             <div class="wireframe-screen" style="min-height:320px;background:#0f2027;color:white;padding:20px;gap:16px;">
@@ -172,14 +172,14 @@
                                 <div class="wf-callout" style="top:50%;left:50%;transform:translate(-50%,-50%);">3</div>
                             </div>
                         </div>
-                        <p class="wireframe-caption">Run screen — distance counter, boost indicator, and the track itself filling the frame.</p>
+                        <p class="wireframe-caption">Run screen - distance counter, boost indicator, and the track itself filling the frame.</p>
                     </div>
                     <div class="annotations">
                         <div class="annotation-item">
                             <span class="annotation-num">1</span>
                             <div class="annotation-text">
                                 <h4>Distance counter</h4>
-                                <p>The only persistent number on screen — small, top-left, never blocking the track.</p>
+                                <p>The only persistent number on screen - small, top-left, never blocking the track.</p>
                             </div>
                         </div>
                         <div class="annotation-item">
@@ -193,7 +193,7 @@
                             <span class="annotation-num">3</span>
                             <div class="annotation-text">
                                 <h4>Track fills the frame</h4>
-                                <p>No chrome around the play area — the whole screen is the game, edge to edge.</p>
+                                <p>No chrome around the play area - the whole screen is the game, edge to edge.</p>
                             </div>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
                 <p class="feed-date">July 2026</p>
                 <div class="feed-card">
                     <h2>Problem</h2>
-                    <p>One-thumb, tilt-only games are easy to pitch and hard to make feel good. Most either steer too twitchy to trust or too sluggish to feel exciting once the track speeds up — and I wanted to see how far a single, well-tuned mechanic could carry a whole game.</p>
+                    <p>One-thumb, tilt-only games are easy to pitch and hard to make feel good. Most either steer too twitchy to trust or too sluggish to feel exciting once the track speeds up - and I wanted to see how far a single, well-tuned mechanic could carry a whole game.</p>
                 </div>
             </article>
 
@@ -214,7 +214,7 @@
                 <p class="feed-date">July 2026</p>
                 <div class="feed-card-plain">
                     <h2>Project Started</h2>
-                    <p>SphereRun began as a two-week scope: a single mechanic — tilt-steer a rolling sphere down an ever-accelerating course — pushed as far as it could go in that window. Core loop, controls, and track generation came together fast; the remaining time is going toward tuning and store prep.</p>
+                    <p>SphereRun began as a two-week scope: a single mechanic - tilt-steer a rolling sphere down an ever-accelerating course - pushed as far as it could go in that window. Core loop, controls, and track generation came together fast; the remaining time is going toward tuning and store prep.</p>
                 </div>
             </article>
 

@@ -26,8 +26,8 @@ const projectData = {
         tools: "API, CSS, Figma, Github, HTML, JS, Xcode",
         link: "https://coralgala.live",
         page: "projects/coralgala.html",
-        summary: "Coral Gala is a virtual fish tank experience built as a live, browser-based aquarium that users can interact with in real time. Designed with playful animation, atmospheric sounds, and multiplayer persistence, the site blends nostalgia with modern web interactivity—serving as both a digital toy and a social experiment.",
-        problem: "Despite the popularity of ambient apps and screensavers, most virtual fish tanks are static, single-user, or tied to outdated software. There's a gap in fun, lightweight web-based experiences that users can visit casually—but return to often.",
+        summary: "Coral Gala is a virtual fish tank experience built as a live, browser-based aquarium that users can interact with in real time. Designed with playful animation, atmospheric sounds, and multiplayer persistence, the site blends nostalgia with modern web interactivity - serving as both a digital toy and a social experiment.",
+        problem: "Despite the popularity of ambient apps and screensavers, most virtual fish tanks are static, single-user, or tied to outdated software. There's a gap in fun, lightweight web-based experiences that users can visit casually - but return to often.",
         solution: "The solution was to develop Coral Gala as a real-time fish tank website where users can add fish, customize them, and watch them swim in a shared environment. Fish movement is animated using JavaScript, and persistent data is stored via Firebase.",
         learned: "Coral Gala taught me how to blend ambient design with multiplayer systems. I learned the power of shared digital spaces and how to give users just enough control to make them feel connected."
     },
@@ -90,8 +90,8 @@ const projectData = {
         link: "https://www.figma.com/proto/8mJG0q1QBuP3NEiucSJlK2/D%5E2K?node-id=77-8&starting-point-node-id=77%3A8",
         page: "projects/quicker.html",
         summary: "QuickER was a small-team UI/UX exploration into what a remote ER check-in experience could look like, developed with the same rigor as a real product: two teammates led patient and provider interviews, real usability testing shaped each iteration, and I carried the design into a working cross-platform Flutter prototype.",
-        problem: "Patients with non-life-threatening conditions often face long wait times and a cumbersome intake process in emergency rooms — we wanted to see whether a remote check-in flow could realistically ease that, and what building and validating one would actually take.",
-        solution: "Designed a remote check-in flow — intake form, queue position, ETA, depart prompt — informed by the team's interviews and validated through real usability testing, then built it out as a working Flutter prototype for iOS and Android. The process ran like a real product development cycle: research, iterate, test, refine.",
+        problem: "Patients with non-life-threatening conditions often face long wait times and a cumbersome intake process in emergency rooms - we wanted to see whether a remote check-in flow could realistically ease that, and what building and validating one would actually take.",
+        solution: "Designed a remote check-in flow - intake form, queue position, ETA, depart prompt - informed by the team's interviews and validated through real usability testing, then built it out as a working Flutter prototype for iOS and Android. The process ran like a real product development cycle: research, iterate, test, refine.",
         learned: "QuickER taught me how to fold real user and provider research and usability testing into design decisions, and how to run a design process with the same discipline as a real production team even when the end goal is exploration rather than a commercial launch."
     },
     peerpair: {
@@ -101,10 +101,10 @@ const projectData = {
         timeline: "July 10, 2023 → July 31, 2023",
         tools: "API, Flutter, Github, Swift",
         page: "projects/peerpair.html",
-        summary: "PeerPair was a self-directed UI/UX exploration, run with the same rigor as a real product cycle — design, build, and real usability testing — to see what it'd take to create a TikTok-based matchmaking app end to end. Over three weeks I designed the flow, then built and tested it twice: once in Flutter, once natively in Swift, to compare the two toolchains on a real, testable product instead of a tutorial.",
-        problem: "The question wasn't whether the app could find users — it was whether content-based matching (pairing people by what they actually watch, not a written bio) could be designed, built, and validated with real usability testing in a short, self-directed timeframe.",
-        solution: "Designed the full flow — TikTok connection, content-based matching, swipe-stack cards, basic chat — then built it twice to compare approaches: a cross-platform Flutter build, followed by a native Swift/Xcode build. Each reached a working, user-tested state before development wrapped; the goal was the full development experience, not a commercial launch.",
-        learned: "Building the same product twice, in two different stacks, and testing both with real users, surfaced tradeoffs that reading documentation alone never would — and it sharpened both my UI/UX design and mobile development instincts at once."
+        summary: "PeerPair was a self-directed UI/UX exploration, run with the same rigor as a real product cycle - design, build, and real usability testing - to see what it'd take to create a TikTok-based matchmaking app end to end. Over three weeks I designed the flow, then built and tested it twice: once in Flutter, once natively in Swift, to compare the two toolchains on a real, testable product instead of a tutorial.",
+        problem: "The question wasn't whether the app could find users - it was whether content-based matching (pairing people by what they actually watch, not a written bio) could be designed, built, and validated with real usability testing in a short, self-directed timeframe.",
+        solution: "Designed the full flow - TikTok connection, content-based matching, swipe-stack cards, basic chat - then built it twice to compare approaches: a cross-platform Flutter build, followed by a native Swift/Xcode build. Each reached a working, user-tested state before development wrapped; the goal was the full development experience, not a commercial launch.",
+        learned: "Building the same product twice, in two different stacks, and testing both with real users, surfaced tradeoffs that reading documentation alone never would - and it sharpened both my UI/UX design and mobile development instincts at once."
     },
     amazeweb: {
         title: "Amaze Web",
@@ -126,9 +126,9 @@ const projectData = {
         timeline: "April 2026 → Present",
         tools: "Swift, SwiftUI, tvOS, GameController, Multipeer Connectivity, Xcode, Figma",
         page: "projects/familyduel.html",
-        summary: "Family Duel is a living-room party game for Apple TV — two teams face off on the big screen, buzzing in from their own phones to answer survey-style questions before the clock runs out. Built for game night, not a single player alone on a couch.",
-        problem: "Apple TV has almost no local multiplayer party games built for a room full of people, and the single Siri Remote makes head-to-head competition awkward — there's no good way to give two teams their own buzzer.",
-        solution: "Family Duel turns each player's iPhone into a wireless buzzer over the local network, while the TV runs the show — question, timer, and score for the whole room to see. Survey-style questions reward reading the room as much as knowing the answer.",
+        summary: "Family Duel is a living-room party game for Apple TV - two teams face off on the big screen, buzzing in from their own phones to answer survey-style questions before the clock runs out. Built for game night, not a single player alone on a couch.",
+        problem: "Apple TV has almost no local multiplayer party games built for a room full of people, and the single Siri Remote makes head-to-head competition awkward - there's no good way to give two teams their own buzzer.",
+        solution: "Family Duel turns each player's iPhone into a wireless buzzer over the local network, while the TV runs the show - question, timer, and score for the whole room to see. Survey-style questions reward reading the room as much as knowing the answer.",
         learned: "Family Duel is teaching me how to design for the 10-foot living-room experience and how to treat a phone as a lightweight game controller instead of the primary screen."
     },
     sphererun: {
@@ -138,8 +138,8 @@ const projectData = {
         timeline: "July 2026 → Present",
         tools: "Swift, SwiftUI, SceneKit, CoreMotion, GameKit, Xcode",
         page: "projects/sphererun.html",
-        summary: "SphereRun is a tilt-controlled endless runner — steer a rolling sphere down a procedurally generated course, dodge gaps and obstacles, and grab boosts as the track keeps accelerating. Started two weeks ago and closing in on a finished build.",
-        problem: "One-thumb, tilt-only games are easy to describe but hard to make feel good — most either steer too twitchy to trust or too sluggish to feel exciting as speed ramps up.",
+        summary: "SphereRun is a tilt-controlled endless runner - steer a rolling sphere down a procedurally generated course, dodge gaps and obstacles, and grab boosts as the track keeps accelerating. Started two weeks ago and closing in on a finished build.",
+        problem: "One-thumb, tilt-only games are easy to describe but hard to make feel good - most either steer too twitchy to trust or too sluggish to feel exciting as speed ramps up.",
         solution: "SphereRun maps CoreMotion tilt directly to lateral sphere movement with smoothing tuned specifically for one-handed play, layers in a procedural track generator so no two runs repeat, and uses GameKit leaderboards to give runs something to chase.",
         learned: "SphereRun is teaching me how much of a runner's feel comes down to input smoothing and difficulty ramp tuning rather than the core mechanic itself."
     },
@@ -213,7 +213,7 @@ const projectData = {
         summary: "The Mood Ring Apple Watch app transforms real-time biometric data into a dynamic, color-shifting ring that reflects the wearer's emotional state. Leveraging HealthKit and SwiftUI, it offers an intuitive glanceable experience.",
         problem: "Traditional mood-ring jewelry uses skin temperature to infer emotion but offers no context or personalization. On Apple Watch, raw sensor data is underutilized.",
         solution: "Mood Ring uses HealthKit to fetch heart rate and heart rate variability, applies a custom algorithm to map physiological signals to an emotional spectrum, and renders a smooth, animated ring.",
-        learned: "Mood Ring deepened my understanding of emotional design—how visual feedback can shape user experience on a subconscious level."
+        learned: "Mood Ring deepened my understanding of emotional design - how visual feedback can shape user experience on a subconscious level."
     },
     packtrack: {
         title: "Pack Track",
@@ -223,10 +223,10 @@ const projectData = {
         tools: "C, Flipper Zero SDK, FlipperHTTP, ufbt, Github",
         link: "https://github.com/thecoolguy2001/flipper-pack-track",
         page: "projects/packtrack.html",
-        summary: "Pack Track is a native shipment tracker for the Flipper Zero — a clean, glanceable list of your packages on the 128×64 monochrome display. It's manual-first, driven by a plain text file on the SD card with no internet or accounts needed, and optionally goes live with a Wi-Fi devboard to fetch real tracking status.",
+        summary: "Pack Track is a native shipment tracker for the Flipper Zero - a clean, glanceable list of your packages on the 128×64 monochrome display. It's manual-first, driven by a plain text file on the SD card with no internet or accounts needed, and optionally goes live with a Wi-Fi devboard to fetch real tracking status.",
         problem: "Traditional package tracking requires a smartphone or computer to constantly go online to check their provider site for delivery information, creating friction when users just want a quick status glance.",
-        solution: "Pack Track works two ways. Manual mode keeps the list in packages.txt on the SD card — no backend at all. Live mode uses a Wi-Fi devboard running FlipperHTTP plus your own tracking-service API key: no provider is hardcoded, so a config file points it at any service, and pressing RIGHT refreshes every package.",
-        learned: "Pack Track is teaching me how to balance embedded constraints with real-world utility — parsing config and JSON in pure, host-tested C, talking HTTP over a UART, and designing glanceable UI for a 128×64 monochrome screen."
+        solution: "Pack Track works two ways. Manual mode keeps the list in packages.txt on the SD card - no backend at all. Live mode uses a Wi-Fi devboard running FlipperHTTP plus your own tracking-service API key: no provider is hardcoded, so a config file points it at any service, and pressing RIGHT refreshes every package.",
+        learned: "Pack Track is teaching me how to balance embedded constraints with real-world utility - parsing config and JSON in pure, host-tested C, talking HTTP over a UART, and designing glanceable UI for a 128×64 monochrome screen."
     },
     roulette: {
         title: "Roulette",
@@ -237,7 +237,7 @@ const projectData = {
         link: "https://github.com/thecoolguy2001/flipper-roulette",
         page: "projects/roulette.html",
         summary: "Roulette is a polished, single-screen revolver roulette game for the Flipper Zero, built natively as a FAP in under three hundred lines of C. A hand-drawn six-chamber cylinder, hardware-randomized bullet placement, multi-tone audio, vibration, and synchronized LED feedback deliver a tense, arcade-style game loop.",
-        problem: "The Flipper Zero is widely known for its tools and hacking modules—but it lacks playful, high-stakes games that utilize the device's buzzer, screen, and input in a theatrical way.",
+        problem: "The Flipper Zero is widely known for its tools and hacking modules - but it lacks playful, high-stakes games that utilize the device's buzzer, screen, and input in a theatrical way.",
         solution: "Each round hides the bullet in one of six chambers using the Flipper's on-die hardware random number generator, then advances the cylinder one position per trigger pull. A click gives a short haptic tap and ticks the survival counter; a bang ends the round with a full-screen flash, a low tone, the red LED, and a sustained vibration.",
         learned: "Roulette is teaching me how to build emotional feedback systems with almost no UI. The app has pushed my thinking on timing, pacing, and physical feedback."
     },
@@ -249,10 +249,10 @@ const projectData = {
         tools: "C, Flipper Zero SDK, Sub-GHz Radio, ufbt, Github",
         link: "https://github.com/thecoolguy2001/flipper-pod",
         page: "projects/pod.html",
-        summary: "Pod is a Flipper-to-Flipper encounter game played over the built-in sub-GHz radio — no add-on hardware. Carry your Flipper with Pod open and it quietly broadcasts your dolphin and listens for others; cross paths with another player and it logs the encounter, linger near each other and you can battle in a live 10-second tap race.",
-        problem: "The Flipper Zero community thrives on interaction and creativity—but most peer-to-peer activity requires active input or hacking modules. There's no playful, automatic way for Flipper owners to recognize and 'battle' each other in the wild.",
-        solution: "While Walk Mode is open, Pod broadcasts a tiny calling card — your callsign, a random ID, and your real dolphin level — on 433.92 MHz and listens for others. Catching a beacon logs the encounter; if both players opt in, a battle starts: a 3-2-1 countdown, then mash OK for 10 seconds — most taps wins XP toward ranks from Minnow to Kraken.",
-        learned: "Pod is teaching me how to build a radio protocol from scratch — self-framed messages with CRC-8 and de-duplication over the Flipper's sub-GHz worker — and how to design a multiplayer handshake that could be host-tested before two devices ever met."
+        summary: "Pod is a Flipper-to-Flipper encounter game played over the built-in sub-GHz radio - no add-on hardware. Carry your Flipper with Pod open and it quietly broadcasts your dolphin and listens for others; cross paths with another player and it logs the encounter, linger near each other and you can battle in a live 10-second tap race.",
+        problem: "The Flipper Zero community thrives on interaction and creativity - but most peer-to-peer activity requires active input or hacking modules. There's no playful, automatic way for Flipper owners to recognize and 'battle' each other in the wild.",
+        solution: "While Walk Mode is open, Pod broadcasts a tiny calling card - your callsign, a random ID, and your real dolphin level - on 433.92 MHz and listens for others. Catching a beacon logs the encounter; if both players opt in, a battle starts: a 3-2-1 countdown, then mash OK for 10 seconds - most taps wins XP toward ranks from Minnow to Kraken.",
+        learned: "Pod is teaching me how to build a radio protocol from scratch - self-framed messages with CRC-8 and de-duplication over the Flipper's sub-GHz worker - and how to design a multiplayer handshake that could be host-tested before two devices ever met."
     },
     arfilter: {
         title: "AR Filter Games",
@@ -275,9 +275,9 @@ const projectData = {
         tools: "Raspberry Pi, Camera Module 3, Local LLM, Local Vision LLM, Cloud AI, Python, USB Microphone, USB Speaker",
         page: "projects/le.html",
         summary: "LE is a Raspberry Pi-based local AI agentic bot designed to be a smarter home assistant. It runs a locally-downloaded LLM on-device alongside a local visual LLM for camera-based intelligence, with a face UI and mirror UI for ambient interaction. More demanding requests can be routed to a cloud AI of choice, giving LE the breadth of cloud assistants without sacrificing the privacy and immediacy of on-device processing.",
-        problem: "Today's home assistants — Alexa, Google Home, Siri — are limited. They live in walled-garden ecosystems, send most queries to the cloud, can't see or reason about their environment, and can't perform agentic multi-step tasks. There's no easily-extensible home assistant that combines local privacy, vision, and the ability to act as a true agent.",
+        problem: "Today's home assistants - Alexa, Google Home, Siri - are limited. They live in walled-garden ecosystems, send most queries to the cloud, can't see or reason about their environment, and can't perform agentic multi-step tasks. There's no easily-extensible home assistant that combines local privacy, vision, and the ability to act as a true agent.",
         solution: "LE pairs a Raspberry Pi with a Camera Module 3, USB microphone, and USB speaker to handle input/output. A local LLM handles everyday queries on-device; a local vision LLM gives LE visual intelligence through the camera. A routing system escalates more demanding commands to a cloud AI of choice. The interface mixes a face UI for personality with a mirror UI for at-a-glance information.",
-        learned: "This project is just getting started — work began April 14, 2026 — and I'll be adding more in-depth details soon as the system matures, including specifics on the local model stack, vision pipeline, agent loop, and hardware build."
+        learned: "This project is just getting started - work began April 14, 2026 - and I'll be adding more in-depth details soon as the system matures, including specifics on the local model stack, vision pipeline, agent loop, and hardware build."
     },
     thirtyforthirty: {
         title: "#30for30",
@@ -287,9 +287,9 @@ const projectData = {
         tools: "JavaScript, Canvas, WebGPU, WebXR, three.js, MediaPipe, transformers.js, Chrome Prompt API, WebRTC, Web Speech, Web Audio, Node, React",
         page: "projects/thirtyforthirty.html",
         summary: "#30for30 is a month-long challenge I set for myself in June: design, build, and ship one web project every single day, for 30 days straight. The thirty experiments range from a million-button toy to an AR séance with a local LLM, a ship you sail by blowing into your mic, on-device AI tools where nothing ever uploads, and a game you play by resizing your browser window.",
-        problem: "Tutorials and long-term projects only exercise a narrow slice of web development. I wanted a forcing function that would push me through the breadth of web technologies — and make me a faster, more confident developer by building constantly instead of occasionally.",
-        solution: "A hard daily deadline. Every day in June I scoped, designed, and shipped a small web project, deliberately rotating through different corners of the platform — on-device AI (WebGPU, Chrome's Prompt API), AR (WebXR), computer vision (MediaPipe, COCO-SSD), multi-device play (WebRTC), and unconventional inputs like breath, body pose, browser zoom, and window size. Ideas that failed were scrapped and replaced; thirty still had to ship.",
-        learned: "The browser is drastically more capable than most sites let on — I shipped local LLMs, AR, real physics, and multi-device play with only one project of the thirty needing a server. Daily shipping also taught me ruthless scoping, and that killing a failing idea fast is cheaper than rescuing it: two builds got scrapped mid-month and replaced."
+        problem: "Tutorials and long-term projects only exercise a narrow slice of web development. I wanted a forcing function that would push me through the breadth of web technologies - and make me a faster, more confident developer by building constantly instead of occasionally.",
+        solution: "A hard daily deadline. Every day in June I scoped, designed, and shipped a small web project, deliberately rotating through different corners of the platform - on-device AI (WebGPU, Chrome's Prompt API), AR (WebXR), computer vision (MediaPipe, COCO-SSD), multi-device play (WebRTC), and unconventional inputs like breath, body pose, browser zoom, and window size. Ideas that failed were scrapped and replaced; thirty still had to ship.",
+        learned: "The browser is drastically more capable than most sites let on - I shipped local LLMs, AR, real physics, and multi-device play with only one project of the thirty needing a server. Daily shipping also taught me ruthless scoping, and that killing a failing idea fast is cheaper than rescuing it: two builds got scrapped mid-month and replaced."
     },
     huntar: {
         title: "HuntAR",
@@ -298,10 +298,10 @@ const projectData = {
         timeline: "August 2026 → Present",
         tools: "RealityKit, ARKit, SwiftUI",
         page: "projects/huntar.html",
-        summary: "HuntAR is a modern AR reimagining of the classic light-gun hunting game. RealityKit scans the player's real environment and populates it with ducks, and the phone itself becomes the lightgun — move it to aim, tap to fire.",
-        problem: "Classic light-gun games like Duck Hunt never made the jump to modern hardware — most remakes are flat touchscreen ports that lose the physical act of aiming at something.",
+        summary: "HuntAR is a modern AR reimagining of the classic light-gun hunting game. RealityKit scans the player's real environment and populates it with ducks, and the phone itself becomes the lightgun - move it to aim, tap to fire.",
+        problem: "Classic light-gun games like Duck Hunt never made the jump to modern hardware - most remakes are flat touchscreen ports that lose the physical act of aiming at something.",
         solution: "An ARKit and RealityKit-powered hunting game that places ducks directly in the player's real environment, turning the phone itself into the lightgun.",
-        learned: "This project is just getting started — work began August 2026 — and I'll be adding more in-depth details soon as the AR spawning, aiming, and scoring systems mature."
+        learned: "This project is just getting started - work began August 2026 - and I'll be adding more in-depth details soon as the AR spawning, aiming, and scoring systems mature."
     }
 };
 
