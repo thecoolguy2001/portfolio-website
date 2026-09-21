@@ -131,6 +131,18 @@ const projectData = {
         solution: "Family Duel turns each player's iPhone into a wireless buzzer over the local network, while the TV runs the show, displaying the question, timer, and score for the whole room to see. Survey-style questions reward reading the room as much as knowing the answer.",
         learned: "Family Duel is teaching me how to design for the 10-foot living-room experience and how to treat a phone as a lightweight game controller instead of the primary screen."
     },
+    joyride: {
+        title: "Joy Ride",
+        subtitle: "iOS Game",
+        role: "Founder / Game Designer / iOS Developer",
+        timeline: "September 2026 → Present",
+        tools: "Swift, SwiftUI, Xcode, Figma (planned)",
+        page: "projects/joyride.html",
+        summary: "Joy Ride is an endless multiplayer driving game in ideation: one road that never ends, shared with real players who drift in and out of the run. The concept and core loop are still being defined, and nothing is built yet.",
+        problem: "Mobile driving games sit at two extremes. Endless runners are easy to pick up but lonely, while racing sims are social but ask for a real time commitment before anything happens.",
+        solution: "The direction is an endless road populated by other players rather than scripted traffic, with no lobbies or countdowns, so opening the app puts you on the road in seconds. How players interact on that road is the open question the ideation phase is there to answer.",
+        learned: "Joy Ride is teaching me to settle the questions that define a game, like whether cars collide and how an endless run ends, before writing code against them."
+    },
     sphererun: {
         title: "SphereRun",
         subtitle: "iOS Game",
