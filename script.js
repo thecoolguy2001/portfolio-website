@@ -340,9 +340,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function initPageLoader() {
     const loader = document.querySelector('.page-loader');
     if (loader) {
-        setTimeout(() => {
-            loader.classList.add('hidden');
-        }, 1200);
+        const hide = () => loader.classList.add('hidden');
+        if (document.readyState === 'complete') {
+            hide();
+        } else {
+            window.addEventListener('load', hide, { once: true });
+        }
+        // Safety net: never hold the page behind the loader
+        setTimeout(hide, 800);
     }
 }
 
@@ -355,22 +360,38 @@ function initProjectVideoHover() {
         const card = container.closest('.project-card');
 
         if (video && card) {
-            // Preload video
-            video.load();
+            // Videos are preload="none": fetch the first time a card is really
+            // hovered, never on page load. 18 cards x multi-MB video would stall
+            // a weak machine.
+            let loaded = false;
+            let hoverTimer = null;
+
+            // Hover intent: scrolling the page under a still cursor fires
+            // mouseenter on every card that slides past it. Without this delay a
+            // single scroll starts several multi-MB video downloads at once.
+            const HOVER_INTENT_MS = 180;
 
             card.addEventListener('mouseenter', () => {
-                video.currentTime = 0;
-                const playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(() => {
-                        // Autoplay was prevented, try again with muted
-                        video.muted = true;
-                        video.play().catch(() => {});
-                    });
-                }
+                clearTimeout(hoverTimer);
+                hoverTimer = setTimeout(() => {
+                    if (!loaded) {
+                        video.load();
+                        loaded = true;
+                    }
+                    video.currentTime = 0;
+                    const playPromise = video.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(() => {
+                            // Autoplay was prevented, try again with muted
+                            video.muted = true;
+                            video.play().catch(() => {});
+                        });
+                    }
+                }, HOVER_INTENT_MS);
             });
 
             card.addEventListener('mouseleave', () => {
+                clearTimeout(hoverTimer);
                 video.pause();
                 video.currentTime = 0;
             });
@@ -383,7 +404,11 @@ function initProjectCards() {
     const cards = document.querySelectorAll('.project-card');
 
     cards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            // The live-site link on a card is a real link: let it navigate
+            // instead of opening the project modal.
+            if (e.target.closest('a')) return;
+
             const projectId = card.dataset.project;
             if (projectData[projectId]) {
                 openModal(projectId);
@@ -727,20 +752,41 @@ window.addEventListener('scroll', () => {
     }
 });
 
-document.addEventListener('mousemove', (e) => {
-    const hero = document.querySelector('.hero-content');
-    if (!hero) return;
+// Pointer parallax is a nice-to-have: skip it where it costs more than it gives
+// (touch devices, reduced-motion users, and low-core machines).
+const allowPointerParallax =
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+    (navigator.hardwareConcurrency === undefined || navigator.hardwareConcurrency > 4);
 
-    const rect = hero.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const mouseX = e.clientX - centerX;
-    const mouseY = e.clientY - centerY;
+let pointerTicking = false;
 
-    heroRotateX = (mouseY / window.innerHeight) * 2;
-    heroRotateY = (mouseX / window.innerWidth) * -2;
-    applyHeroTransform();
-});
+if (allowPointerParallax) {
+    document.addEventListener('mousemove', (e) => {
+        if (pointerTicking) return;
+        pointerTicking = true;
+
+        requestAnimationFrame(() => {
+            pointerTicking = false;
+
+            const hero = document.querySelector('.hero-content');
+            if (!hero) return;
+
+            // Only the hero uses this, so stop once it is scrolled away
+            if (window.pageYOffset > window.innerHeight) return;
+
+            const rect = hero.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const mouseX = e.clientX - centerX;
+            const mouseY = e.clientY - centerY;
+
+            heroRotateX = (mouseY / window.innerHeight) * 2;
+            heroRotateY = (mouseX / window.innerWidth) * -2;
+            applyHeroTransform();
+        });
+    }, { passive: true });
+}
 
 document.querySelector('.hero')?.addEventListener('mouseleave', () => {
     const hero = document.querySelector('.hero-content');
