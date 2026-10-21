@@ -1,5 +1,5 @@
 /**
- * Demonte Walker Portfolio
+ * Demonté Walker Portfolio
  * Interactive functionality
  */
 
