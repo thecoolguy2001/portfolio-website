@@ -35,10 +35,20 @@
 
         <!-- Project Image Placeholder -->
         <div class="project-image">
-            <div class="project-image-placeholder" style="background: linear-gradient(135deg, #f83600 0%, #fe8c00 50%, #f9d423 100%);">
-                #30for30
-            </div>
+            <video class="project-hero-video" autoplay muted loop playsinline disablePictureInPicture poster="../project images/30for30.png">
+                <source src="../project images/30for30Video.mov" type="video/quicktime">
+                <source src="../project images/30for30Video.mov" type="video/mp4">
+            </video>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.querySelector('.project-hero-video');
+                if (video) {
+                    video.muted = true;
+                    video.play().catch(() => {});
+                }
+            });
+        </script>
 
         <!-- Meta -->
         <div class="project-meta">
