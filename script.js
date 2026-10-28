@@ -253,6 +253,32 @@ const projectData = {
         solution: "Each round hides the bullet in one of six chambers using the Flipper's on-die hardware random number generator, then advances the cylinder one position per trigger pull. A click gives a short haptic tap and ticks the survival counter; a bang ends the round with a full-screen flash, a low tone, the red LED, and a sustained vibration.",
         learned: "Roulette is teaching me how to build emotional feedback systems with almost no UI. The app has pushed my thinking on timing, pacing, and physical feedback."
     },
+    motionlab: {
+        title: "Motion Lab",
+        subtitle: "Flipper Zero App",
+        role: "Designer / Embedded Developer",
+        timeline: "October 2026",
+        tools: "C, Flipper Zero SDK, ICM-42688-P, SPI, ufbt, GitHub",
+        link: "https://lab.flipper.net/apps/motion_lab",
+        page: "projects/motionlab.html",
+        summary: "Motion Lab turns a Flipper Zero and its Video Game Module into a motion measuring instrument. Arm the Swing Meter, swing or hit something, and it reports peak acceleration in g with gravity removed, peak rotation rate in deg/s, and swing tempo as a backswing-to-downswing ratio, with a switchable force or rotation trace of the whole event. A second mode logs motion continuously to a CSV on the SD card at 100 Hz with a live graph.",
+        problem: "Every other app for the Video Game Module treats its six-axis sensor as a controller: tilt to steer, tilt to aim. In that framing the readings only have to feel responsive, never be accurate. Nothing was using the same hardware to answer how fast something rotated or how hard it hit, which are measurements rather than reactions.",
+        solution: "The module's ICM-42688-P is wired to both the module's RP2040 and the Flipper's GPIO connector, so the app reads it directly over SPI with no custom module firmware in the middle, and the module keeps working normally for everything else. Ranges are set to the widest the sensor offers, plus-minus 16 g and plus-minus 2000 deg/s at 1 kHz, because a real bat or club swing clips anything narrower and a clipped peak is a wrong answer that looks right.",
+        learned: "Deciding that the app owed the user a number rather than a reaction changed almost every decision after it. A controller can be approximately right and still feel good; an instrument that is approximately right is just quietly wrong. That pushed the design toward being explicit about measurement conditions, like asking for a still second at launch to zero the gyro, instead of hiding them."
+    },
+    wifiradio: {
+        title: "Flipper WiFi Radio",
+        subtitle: "Flipper Zero App",
+        role: "Designer / Embedded Developer",
+        timeline: "October 2026",
+        tools: "C, Flipper Zero SDK, ESP-IDF, ESP32-S2, UART, ufbt, GitHub",
+        link: "https://github.com/thecoolguy2001/flipper-wifi-radio",
+        page: "projects/wifiradio.html",
+        summary: "Flipper WiFi Radio turns a Flipper Zero and an ESP32-S2 devboard into a pocket radio station. Pick an MP3 off the SD card and the Flipper paces it over UART to the devboard, which broadcasts its own WiFi network and re-serves the audio as a live stream. Up to eight people nearby join, get handed a player page by the captive portal, and hear the same moment at the same time with nothing to install.",
+        problem: "Playing music for people around you has bad options. A speaker fills the room whether everyone wants it or not, Bluetooth pairs to one device, and anything that syncs playback across phones needs every person to install the same app and sign in. Meanwhile every phone already contains a perfectly good audio player that needs no installation: its browser.",
+        solution: "Neither chip decodes audio. The Flipper reads the bitrate from the first MP3 frame header and reads the file out at exactly that rate, so pacing the bytes is what keeps time, and a credit window from the ESP acts as an overflow backstop. The devboard fans that one stream out to every listener, so bandwidth stays flat as people join and joining late drops you in wherever the track has got to, exactly like tuning into a station.",
+        learned: "The hardest part was time, not audio. A frame cut short mid-payload could not be recovered by scanning for the next start byte, because the start byte is unescaped and occurs naturally inside MP3 data, so one truncated frame also destroyed the frame after it. The fix was resyncing on silence instead of content: abandon a partial frame after a 50 ms idle gap, which is far longer than the 5.6 ms a full frame takes at 921600 baud."
+    },
     pod: {
         title: "Pod",
         subtitle: "Flipper Zero App",

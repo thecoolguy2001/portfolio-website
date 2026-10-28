@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <title>Motion Lab | Demonté Walker</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#projects" class="project-nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+        </a>
+        <a href="../index.html" class="project-nav-logo">
+            <img src="../portfolio_logo.png" alt="DW Logo">
+        </a>
+        <div style="width: 60px;"></div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-hero-label">Flipper Zero App</p>
+            <h1 class="project-hero-title">Motion Lab</h1>
+            <p class="project-hero-subtitle">A measuring instrument for the Flipper Zero Video Game Module: peak g-force, rotation rate and swing tempo, plus a 100 Hz CSV logger.</p>
+            <div class="project-status">Complete</div>
+        </section>
+
+        <!-- Project Image Placeholder -->
+        <div class="project-image">
+            <div class="project-image-placeholder" style="background: linear-gradient(135deg, #0B1E2D 0%, #1E5F74 55%, #00C2A8 100%);">
+                Motion Lab
+            </div>
+        </div>
+
+        <!-- Meta -->
+        <div class="project-meta">
+            <div class="project-meta-item">
+                <h4>Role</h4>
+                <p>Designer / Embedded Developer</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Timeline</h4>
+                <p>October 2026</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Team</h4>
+                <p>Demonté Walker</p>
+            </div>
+            <div class="project-meta-item">
+                <h4>Tools</h4>
+                <p>C, Flipper Zero SDK, ICM-42688-P, SPI, ufbt, GitHub</p>
+            </div>
+        </div>
+
+        <!-- Feed -->
+        <div class="project-glance">
+            <div class="glance-item">
+                <h4>Problem</h4>
+                <p>Every app for the Video Game Module treats its motion sensor as a controller. Nothing used it to actually measure anything.</p>
+            </div>
+            <div class="glance-item">
+                <h4>Solution</h4>
+                <p>An instrument: arm it, swing, and read peak force, rotation rate and tempo. Plus a CSV logger for anything worth studying afterwards.</p>
+            </div>
+            <div class="glance-item">
+                <h4>Outcome</h4>
+                <p>Version 1.0 published on the official Flipper Apps Catalog.</p>
+            </div>
+        </div>
+
+        <div class="project-feed">
+
+            <!-- Results -->
+            <article class="feed-entry">
+                <p class="feed-date">October 15, 2026</p>
+                <div class="feed-card">
+                    <h2>Results</h2>
+                    <p>Motion Lab shipped to the official Flipper Apps Catalog as version 1.0, under Tools. It runs on a stock Video Game Module with nothing to reflash, which was a hard requirement from the start: an app that asks you to replace your module's firmware is an app most people will not install.</p>
+                    <p>The thing I take from it is how much a project changes when you decide it owes the user a <em>number</em> rather than a reaction. A controller can be approximately right and still feel good. An instrument that is approximately right is just wrong, quietly, and the person holding it has no way to tell. That shifted nearly every decision on this project toward being honest about measurement conditions instead of hiding them.</p>
+                </div>
+            </article>
+
+            <!-- What it measures -->
+            <article class="feed-entry">
+                <p class="feed-date">October 15, 2026</p>
+                <div class="feed-card">
+                    <h2>What It Measures</h2>
+                    <p>Two modes, built around two different questions. Swing Meter answers "how hard was that?" for a single event. Motion Logger answers "what happened over time?" and hands you the raw data to go look.</p>
+
+                    <div class="feed-features">
+                        <div class="feed-feature">
+                            <h3>Peak force, gravity removed</h3>
+                            <p>Acceleration in g at the hardest moment of the swing, with the constant 1 g of gravity subtracted so the number means the movement and not the planet.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Peak rotation rate</h3>
+                            <p>How fast the device was turning at its quickest, in degrees per second, across the full ±2000 deg/s the sensor can report.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Swing tempo</h3>
+                            <p>The ratio of backswing to downswing. A textbook 3:1 golf tempo reads as 3.00:1, which makes it a practice tool rather than a novelty readout.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Event trace</h3>
+                            <p>A graph of the whole event on the 128×64 screen, switchable between force and rotation with Left and Right, plus time-to-peak and total duration.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>100 Hz CSV logging</h3>
+                            <p>Continuous recording to the SD card with a live graph while it runs, for vibration, repeated impacts, or anything worth analysing properly later.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h3>Session bests</h3>
+                            <p>Your hardest and fastest readings so far, kept for the session so there is something to beat without needing an account or a save file.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Design decisions -->
+            <article class="feed-entry">
+                <p class="feed-date">October 15, 2026</p>
+                <div class="feed-card">
+                    <h2>Design Decisions</h2>
+                    <p>An instrument makes promises a toy does not. These are the choices that decide whether the numbers on screen can actually be trusted, and each one is a place where the easy option would have produced a nicer demo and a worse tool.</p>
+                    <div class="design-decisions">
+                        <div class="decision-card">
+                            <h4>Widest ranges, on purpose</h4>
+                            <p>±16 g and ±2000 deg/s, sampled at 1 kHz. Narrower ranges give prettier resolution right up until a real bat or club swing clips the ceiling, and a clipped peak is a wrong answer that looks like a right one.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Zero the gyro at launch, and say so</h4>
+                            <p>The gyro's zero offset is measured in the first second after opening the app. Move during it and every rotation reading afterwards is biased. Rather than hide that, the app asks for a still second up front and the docs repeat it, because a silent calibration is a silent error.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Integer milli-units in the CSV</h4>
+                            <p>Columns are logged as mg and mdps rather than floats. The file stays exact, has no formatting drift, and opens cleanly in any spreadsheet without locale or precision surprises.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Never overwrite a recording</h4>
+                            <p>Files land in <code>/ext/apps_data/motion_lab/</code> as <code>motion_001.csv</code> and count up. Losing a capture you cannot repeat is the worst possible failure for a logger, so the app simply has no path that overwrites one.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Fail loudly when the module is missing</h4>
+                            <p>No module attached gets a plain message saying so. The alternative is an app that opens, reads zeroes, and presents them as measurements.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Stock firmware only</h4>
+                            <p>The module keeps working normally for everything else. Asking someone to reflash hardware to try an app is a cost most of them will decline to pay.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Technical -->
+            <article class="feed-entry">
+                <p class="feed-date">October 14, 2026</p>
+                <div class="feed-card">
+                    <h2>Reading the Sensor Directly</h2>
+                    <p>The interesting discovery was that the Video Game Module's ICM-42688-P is wired to two masters at once: the module's own RP2040, and the Flipper's GPIO connector. That means the Flipper can talk to the sensor over SPI itself, without any custom module firmware sitting in the middle translating for it.</p>
+                    <p>This is what makes the "nothing to reflash" promise possible, and it also removes a whole category of problem. There is no companion firmware to version, no protocol between two chips to keep in sync, and no added latency between the sensor and the code doing the maths. The app configures the sensor's ranges and rate itself and reads it straight.</p>
+                    <p>The driver in <code>sensors/</code> comes from Flipper Devices' own <code>flipperzero-good-faps</code> under GPL-3.0, which is also why the whole project is GPL-3.0 rather than something more permissive.</p>
+                </div>
+            </article>
+
+            <!-- Testing -->
+            <article class="feed-entry">
+                <p class="feed-date">October 14, 2026</p>
+                <div class="feed-card">
+                    <h2>Testing the Maths Without Hardware</h2>
+                    <p>Peak detection, gravity removal and tempo ratios are all pure arithmetic over a buffer of samples. None of it needs a Flipper to be correct, and debugging arithmetic on a 128×64 screen attached to a device you have to physically swing is a genuinely bad time.</p>
+                    <p>So the measurement core in <code>capture.c</code> has no Flipper dependencies at all and compiles on a host with a normal C compiler, with its own test runner in <code>test/</code>. Swing detection could then be checked against known inputs on a laptop, and only the parts that genuinely need hardware were debugged on hardware.</p>
+                    <p>That split has a sharp edge worth recording: ufbt's default source glob is recursive, so a <code>test/</code> directory containing its own <code>main()</code> gets compiled into the FAP and breaks the build. The fix was pinning the source list explicitly in <code>application.fam</code> rather than letting it glob.</p>
+                </div>
+            </article>
+
+            <!-- Target users -->
+            <article class="feed-entry">
+                <p class="feed-date">October 14, 2026</p>
+                <div class="feed-card">
+                    <h2>Target Users</h2>
+                    <p>Motion Lab sits at an unusual intersection: people who already own a fairly niche hardware accessory, and people who want a number out of a physical motion. Two patterns shaped it.</p>
+                    <div class="persona-grid">
+                        <div class="persona-card">
+                            <div class="persona-avatar">PA</div>
+                            <h3>The Practising Athlete</h3>
+                            <p class="persona-tagline">Wants feedback on a swing without a launch monitor</p>
+                            <p class="persona-section-label">Goals</p>
+                            <ul class="persona-traits">
+                                <li>See whether a tempo change actually changed anything</li>
+                                <li>Compare one swing against the last one</li>
+                                <li>Get a number without setting up equipment</li>
+                            </ul>
+                            <p class="persona-section-label">Pain Points</p>
+                            <ul class="persona-traits">
+                                <li>Real swing analysers cost hundreds and live in a bag</li>
+                                <li>Phone apps need mounting, and the phone is the thing swinging</li>
+                            </ul>
+                        </div>
+                        <div class="persona-card">
+                            <div class="persona-avatar">MT</div>
+                            <h3>The Module Tinkerer</h3>
+                            <p class="persona-tagline">Bought the Video Game Module and wants it to earn its place</p>
+                            <p class="persona-section-label">Goals</p>
+                            <ul class="persona-traits">
+                                <li>Use the module for something beyond tilt controls</li>
+                                <li>Get raw data out, in a format worth analysing</li>
+                                <li>Keep the module usable for everything else</li>
+                            </ul>
+                            <p class="persona-section-label">Pain Points</p>
+                            <ul class="persona-traits">
+                                <li>Most module apps are tech demos that get opened once</li>
+                                <li>Apps that demand custom firmware are not worth the risk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Problem -->
+            <article class="feed-entry">
+                <p class="feed-date">October 14, 2026</p>
+                <div class="feed-card">
+                    <h2>Problem</h2>
+                    <p>The Video Game Module ships with a capable six-axis motion sensor, and essentially every app built for it uses that sensor the same way: as a controller. Tilt to steer, tilt to move a cursor, tilt to aim. The sensor's job is to produce a <em>reaction</em>, and whether its readings are accurate barely matters as long as the game feels responsive.</p>
+                    <p>That leaves an entire category untouched. The same hardware can tell you how fast something rotated, how hard it hit, and how a movement was distributed over time. Those are measurements, and nothing on the module was treating them as such. The gap was not a missing capability; it was a missing framing.</p>
+                </div>
+            </article>
+
+            <!-- Project Start -->
+            <article class="feed-entry">
+                <p class="feed-date">October 14, 2026</p>
+                <div class="feed-card-plain">
+                    <h2>Project Started</h2>
+                    <p>Motion Lab started from a single question: the module can already sense motion precisely enough to steer a game, so what happens if you stop asking it to react and start asking it to report?</p>
+                    <p>The answer turned out to be a pocket instrument, built in a couple of days, that gives you peak force, rotation rate and swing tempo for anything you can safely swing, hit or drop.</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CTA -->
+        <section class="project-cta">
+            <h2>Explore Motion Lab</h2>
+            <a href="https://lab.flipper.net/apps/motion_lab" class="btn-primary" target="_blank" rel="noopener">
+                Visit Project
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/demonte-walker-83506017b/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/thecoolguy2001" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:demontewalker12@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy;2026 Demonté Walker. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
