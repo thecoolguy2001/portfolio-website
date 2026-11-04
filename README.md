@@ -69,7 +69,7 @@ A few of the deeper write-ups in the `projects/` directory:
 - **Visualizer** — A Three.js / WebGL audio visualizer with 50+ effects, four playback modes, a Custom Effect Creator for user-written shaders, Draw Mode, Game Mode, and a recording pipeline. Long, dated feed of every major release from late 2024 through May 2026.
 - **Old York Times → The Pulp** — A UI/UX concept that started as a digital pulp publication and pivoted to a physical magazine after pre-launch reassessment. Documents the full pivot, the rename in October 2025, and the May 2026 print finalization.
 - **Amaze Web** — A six-year-running client web service. Started 2020 on Wix / WordPress, adopted Webflow in 2021, Framer in 2024, and now expanding into templates, AI-agent integrations, and email design.
-- **Apple Watch trio** — Fibber, Mood Ring, and Reflex-o. Three short, focused watchOS experiments built in May–June 2025, now being prepared for App Store submission in May 2026.
+- **Apple Watch trio** — Fibber, Moodbeat, and Reflex-o. Three short, focused watchOS experiments built in May–June 2025 and released on the App Store in November 2026.
 - **Artist Website** — Three discrete versions shipped to a single client between September 2023 and December 2024, with Three.js gallery interactions and a full CMS handoff.
 
 Each case study uses the same component vocabulary — dated feed entries, wireframe blocks, decision cards, persona grids, user-flow strips — implemented entirely in CSS.

@@ -197,6 +197,7 @@ const projectData = {
         role: "UI/UX Designer / App Developer",
         timeline: "May 26, 2025 → June 20, 2025",
         tools: "Figma, Github, JS, Swift, WatchOS, Xcode",
+        link: "https://apps.apple.com/us/app/reflex-o/id6827303062",
         page: "projects/reflexo.html",
         summary: "Reflexo is a fast-paced Apple Watch game designed to test user reflexes using voice commands, real-time animations, and haptic feedback. Built entirely in SwiftUI and AVFoundation, it delivers an intuitive, playful experience that fits perfectly on the wrist.",
         problem: "Smartwatch games often struggle with limited screen real estate, unreliable audio integration, and lackluster feedback loops.",
@@ -209,6 +210,7 @@ const projectData = {
         role: "UI/UX Designer / App Developer",
         timeline: "May 26, 2025 → June 20, 2025",
         tools: "Figma, Github, JS, Swift, WatchOS, Xcode",
+        link: "https://apps.apple.com/us/app/fibber-truth-detector/id6827303184",
         page: "projects/fibber.html",
         summary: "Fibber is an Apple Watch app that simulates a lie-detector by leveraging heart-rate data to infer truthfulness. Using HealthKit and SwiftUI, it guides users through a baseline capture, live monitoring during questioning, and then visualizes results.",
         problem: "Users are intrigued by polygraphs but lack accessible, personal tools to explore biometric feedback.",
@@ -216,16 +218,17 @@ const projectData = {
         learned: "Building Fibber taught me how to walk the line between serious tech and playful UX. I learned how to make biometric data feel emotional."
     },
     moodring: {
-        title: "Mood Ring",
+        title: "Moodbeat",
         subtitle: "Apple Watch App",
         role: "UI/UX Designer / App Developer",
         timeline: "May 26, 2025 → June 20, 2025",
         tools: "Figma, Github, JS, Swift, WatchOS, Xcode",
+        link: "https://apps.apple.com/us/app/moodbeat-heart-color-ring/id6827257841",
         page: "projects/moodring.html",
-        summary: "The Mood Ring Apple Watch app transforms real-time biometric data into a dynamic, color-shifting ring that reflects the wearer's emotional state. Leveraging HealthKit and SwiftUI, it offers an intuitive glanceable experience.",
+        summary: "The Moodbeat Apple Watch app transforms real-time biometric data into a dynamic, color-shifting ring that reflects the wearer's emotional state. Leveraging HealthKit and SwiftUI, it offers an intuitive glanceable experience.",
         problem: "Traditional mood-ring jewelry uses skin temperature to infer emotion but offers no context or personalization. On Apple Watch, raw sensor data is underutilized.",
-        solution: "Mood Ring uses HealthKit to fetch heart rate and heart rate variability, applies a custom algorithm to map physiological signals to an emotional spectrum, and renders a smooth, animated ring.",
-        learned: "Mood Ring deepened my understanding of emotional design: how visual feedback can shape user experience on a subconscious level."
+        solution: "Moodbeat uses HealthKit to fetch heart rate and heart rate variability, applies a custom algorithm to map physiological signals to an emotional spectrum, and renders a smooth, animated ring.",
+        learned: "Moodbeat deepened my understanding of emotional design: how visual feedback can shape user experience on a subconscious level."
     },
     packtrack: {
         title: "Pack Track",
