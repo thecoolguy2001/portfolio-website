@@ -356,6 +356,7 @@ const modalClose = document.querySelector('.modal-close');
 document.addEventListener('DOMContentLoaded', () => {
     initPageLoader();
     initProjectCards();
+    initWorkTabs();
     initProjectVideoHover();
     initScrollReveal();
     initSmoothScroll();
@@ -364,6 +365,62 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillTagsAnimation();
     initTypingAnimation();
 });
+
+// Work / Case Studies tabs
+function initWorkTabs() {
+    const tabs = Array.from(document.querySelectorAll('.work-tab'));
+    const panels = Array.from(document.querySelectorAll('.work-panel'));
+    if (!tabs.length || !panels.length) return;
+
+    function activate(name, focus) {
+        tabs.forEach(tab => {
+            const on = tab.dataset.panel === name;
+            tab.classList.toggle('is-active', on);
+            tab.setAttribute('aria-selected', on ? 'true' : 'false');
+            tab.tabIndex = on ? 0 : -1;
+            if (on && focus) tab.focus();
+        });
+        panels.forEach(panel => {
+            const on = panel.id === 'panel-' + name;
+            panel.hidden = !on;
+            panel.classList.toggle('is-active', on);
+        });
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            activate(tab.dataset.panel, false);
+            const hash = tab.dataset.panel === 'cases' ? '#case-studies' : '#projects';
+            history.replaceState(null, '', hash);
+        });
+    });
+
+    // Left/right arrows move between tabs, per the tablist pattern.
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('keydown', (e) => {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            e.preventDefault();
+            const next = e.key === 'ArrowRight'
+                ? (i + 1) % tabs.length
+                : (i - 1 + tabs.length) % tabs.length;
+            activate(tabs[next].dataset.panel, true);
+        });
+    });
+
+    // Deep link: /#case-studies opens the tab directly. Nothing on the page
+    // carries that id, so the browser will not scroll for it; do it here.
+    function fromHash(scroll) {
+        if (window.location.hash !== '#case-studies') return;
+        activate('cases', false);
+        if (!scroll) return;
+        const section = document.getElementById('projects');
+        if (section) {
+            requestAnimationFrame(() => section.scrollIntoView());
+        }
+    }
+    fromHash(true);
+    window.addEventListener('hashchange', () => fromHash(true));
+}
 
 // Page loader
 function initPageLoader() {

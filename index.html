@@ -68,9 +68,16 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="section-header">
-            <h2 class="section-title">Selected Work</h2>
-            <p class="section-subtitle">Click into each project to learn more about its creation, goal and current version.</p>
+            <h2 class="section-title">Work</h2>
         </div>
+
+        <div class="work-tabs" role="tablist" aria-label="Work views">
+            <button type="button" class="work-tab is-active" role="tab" id="tab-work" aria-controls="panel-work" aria-selected="true" data-panel="work">Selected Work</button>
+            <button type="button" class="work-tab" role="tab" id="tab-cases" aria-controls="panel-cases" aria-selected="false" tabindex="-1" data-panel="cases">Case Studies</button>
+        </div>
+
+        <div class="work-panel is-active" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
+        <p class="panel-intro">Click into each project to learn more about its creation, goal and current version.</p>
 
         <div class="project-grid">
             <!-- Visualizer -->
@@ -617,6 +624,43 @@
                         <p>A Raspberry Pi local AI agentic bot: a smarter home assistant with on-device vision and hybrid cloud routing.</p>
                     </div>
                 </article>
+            </div>
+        </div>
+        </div>
+
+        <div class="work-panel" id="panel-cases" role="tabpanel" aria-labelledby="tab-cases" hidden>
+            <p class="panel-intro">Three questions the work keeps circling back to. Each one reads across several projects rather than retelling a single build, and separates what already ships from what is still a concept.</p>
+
+            <div class="case-grid">
+                <a class="case-card" href="projects/case-ambient.html">
+                    <span class="case-label">Case Study 01</span>
+                    <h3>Designing for Ambient Intelligence</h3>
+                    <p>How an assistant communicates, asks permission, and gives feedback when there is no screen to lean on &mdash; and why the default state should be quiet.</p>
+                    <div class="case-projects"><span>LE</span><span>Moodbeat</span><span>Pack Track</span></div>
+                    <span class="case-go">Read the case study
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+
+                <a class="case-card" href="projects/case-cross-device.html">
+                    <span class="case-label">Case Study 02</span>
+                    <h3>Simplifying Cross-Device Experiences</h3>
+                    <p>Deciding what belongs on a watch, a handheld, a phone or a desktop &mdash; what each surface is uniquely good at, and what should never ask for attention at all.</p>
+                    <div class="case-projects"><span>Apple Watch apps</span><span>Visualizer</span><span>Flipper Zero apps</span></div>
+                    <span class="case-go">Read the case study
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
+
+                <a class="case-card" href="projects/case-interaction.html">
+                    <span class="case-label">Case Study 03</span>
+                    <h3>Exploring New Forms of Interaction</h3>
+                    <p>Audio, voice, motion and biometrics as inputs &mdash; which of them genuinely made an interface easier to use, and which ones only added a layer to explain.</p>
+                    <div class="case-projects"><span>Visualizer</span><span>Reflex-o</span><span>Motion Lab</span><span>Fibber</span></div>
+                    <span class="case-go">Read the case study
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>

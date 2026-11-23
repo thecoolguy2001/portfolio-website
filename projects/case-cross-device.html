@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <title>Simplifying Cross-Device Experiences | Demonté Walker</title>
+    <meta name="description" content="A case study on deciding what belongs on a watch, a handheld, a phone or a desktop — across three Apple Watch apps, three Flipper Zero apps and Visualizer.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="stylesheet" href="case-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#case-studies" class="project-nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+        </a>
+        <a href="../index.html" class="project-nav-logo">
+            <img src="../portfolio_logo.png" alt="DW Logo">
+        </a>
+        <div style="width: 60px;"></div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-hero-label">Case Study 02</p>
+            <h1 class="project-hero-title">Simplifying Cross-Device Experiences</h1>
+            <p class="project-hero-subtitle">Deciding what belongs on a watch, a handheld, a phone or a desktop &mdash; what each surface is uniquely good at, and what should never ask for attention at all.</p>
+        </section>
+        <div class="project-glance">
+            <div class="glance-item">
+                <h4>The question</h4>
+                <p>When the same product runs on a watch, a handheld, a phone and a desktop, what actually belongs on each one &mdash; and what should never ask for attention at all?</p>
+            </div>
+            <div class="glance-item">
+                <h4>The position</h4>
+                <p>Surfaces do not differ by screen size, they differ by how long someone will look. Design to the available attention span first; the layout follows from that.</p>
+            </div>
+            <div class="glance-item">
+                <h4>Where it stands</h4>
+                <p>Seven shipped products across four device classes: three Apple Watch apps, three Flipper Zero apps, and one product (Visualizer) that runs on web, iPhone and Mac.</p>
+            </div>
+        </div>
+        <div class="project-feed">
+            <article class="feed-entry">
+                <p class="feed-date">The question</p>
+                <div class="feed-card">
+                    <h2>Screen size is the wrong variable</h2>
+                    <p>The usual way to describe cross-device work is responsive: one design, reflowed to fit. That works for documents. It falls apart the moment the devices are genuinely different in kind, because the thing that changes between a watch and a desktop is not how many pixels are available. It is how long the user is willing to look.</p>
+                    <p>A glance at a watch is two seconds, often one-handed, often mid-activity. A Flipper Zero is picked up deliberately, held, and read at desk distance on a monochrome display. A phone gets minutes and full touch. A Mac gets a session, a keyboard, a trackpad and possibly a second monitor.</p>
+                    <p>Designing from attention rather than dimensions changes what the question even is. It stops being &ldquo;how do I fit this here&rdquo; and becomes &ldquo;what is the single thing this surface is better at than the others, and what should it refuse to do?&rdquo;</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Apple Watch</p>
+                <div class="feed-card">
+                    <h2>Two seconds, one hand, and a screen too small to be the interface</h2>
+                    <p>Three shipped watchOS apps, all built around the same constraint: the display is too small to be the primary channel, so something else has to be.</p>
+                    <p><strong>Reflex-o</strong> is a reflex game, which on a watch sounds like a bad idea &mdash; tiny targets, unreliable audio, weak feedback. The resolution was to stop treating the screen as the interface. Commands arrive as voice prompts; results arrive as haptics with distinct signatures for right and wrong. The wrist reports the outcome before the eyes catch up. The score sits tiny, top-of-screen and low-contrast so it is visible mid-game without competing with the command word.</p>
+                    <p><strong>Moodbeat</strong> takes the opposite route and makes the screen do exactly one thing. Heart rate and HRV map to a colour ring that fills nearly the whole display, with supporting elements pushed to the edges. No labels, no charts. A chart would be the obvious choice for biometric data and would be unreadable in the two seconds a watch actually gets.</p>
+                    <p><strong>Fibber</strong> structures a heart-rate &ldquo;lie detector&rdquo; as three phases in under a minute, with a haptic marking each transition. The haptic is doing timing work the screen cannot do, because the user is looking at the person they are questioning, not at their wrist.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Flipper Zero</p>
+                <div class="feed-card">
+                    <h2>A handheld that is not a phone</h2>
+                    <p>Three shipped Flipper Zero apps, on a small monochrome display with a directional pad and no touch. The temptation is to treat it as a worse phone. It is more useful to treat it as a different class of object: picked up on purpose, read at desk distance, and expected to work without a network.</p>
+                    <p><strong>Pack Track</strong> is a shipment tracker that reads a plain text file from the SD card, offline, up to twelve packages. The most important line on screen is inverted for contrast so it is readable at arm&rsquo;s length. Live tracking exists but is optional and provider-agnostic &mdash; the user supplies the URL, key and JSON fields rather than being locked to a service. Notably, it never notifies. Checking a package is not worth an interruption, so the product does not generate one.</p>
+                    <p><strong>Motion Lab</strong> turns the Video Game Module into a measuring instrument: peak g-force, rotation rate, swing tempo, plus a 100&nbsp;Hz CSV logger. The design question was what a handheld with no keyboard is good for, and the answer was capture-now-analyse-later. The device records cleanly and hands the data off; it does not try to be the analysis environment.</p>
+                    <p><strong>Pod</strong> uses sub-GHz radio for Flipper-to-Flipper encounters, logging who you crossed paths with and settling it in a ten-second tap race, with no add-on hardware. It is the one case where the device&rsquo;s most interesting capability is one a phone cannot easily replicate at all.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">One product, three surfaces</p>
+                <div class="feed-card">
+                    <h2>Visualizer on web, iPhone and Mac</h2>
+                    <p>Visualizer began as a web app and ran that way for ten months before native iOS and macOS ports were built in Swift. That sequencing matters: the shared layer was already proven before it had to be shared.</p>
+                    <p>What is held constant across surfaces is the effect library, the colour system and the motion language &mdash; so the product reads as one tool. What changes is everything about how it is driven.</p>
+                    <div class="design-decisions">
+                        <div class="decision-card">
+                            <h4>One identity, three layouts</h4>
+                            <p>iPhone, Mac and web each get their own layout rather than a reflow of a single design. Shared catalogue, shared colour, shared motion; separate structure.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Input follows the surface</h4>
+                            <p>Touch-first on iPhone: pinch, swipe, long-press. Trackpad and keyboard on Mac with hover states and full keyboard control. The web build keeps the keyboard as primary.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>The canvas stays chromeless</h4>
+                            <p>No on-screen buttons on any surface. Controls live on the keyboard, or in gestures, so the screen stays the thing you are actually looking at.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Optimisations live in the port</h4>
+                            <p>The Swift builds re-implement the audio path natively but share the effect catalogue one-to-one. Surface-specific performance work stays in the port rather than contaminating the shared effects.</p>
+                        </div>
+                    </div>
+                    <p class="feed-note">The Mac build is designed to be comfortable on a second monitor, and the iOS build respects Low Power Mode and the system Reduce Motion setting. Both are cases of the surface, not the product, deciding how much it is allowed to demand.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">The rule</p>
+                <div class="feed-card">
+                    <h2>What each surface is for</h2>
+                    <p>Across the seven products, the division that holds up is roughly this.</p>
+                    <div class="feed-features">
+                        <div class="feed-feature">
+                            <h4>Watch &mdash; one fact, non-visually</h4>
+                            <p>A single piece of state, delivered through haptics or colour so it does not require a sustained look. If it needs a legend, it does not belong here.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h4>Handheld &mdash; capture and glance</h4>
+                            <p>Deliberate pickup, offline-first, high contrast, readable at desk distance. Good at recording and at showing a short list. Not an analysis surface.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h4>Phone &mdash; the full interaction</h4>
+                            <p>Touch gestures, longer sessions, the place where the product can be explored rather than checked.</p>
+                        </div>
+                        <div class="feed-feature">
+                            <h4>Desktop &mdash; depth and control</h4>
+                            <p>Keyboard, precision input, multi-window, background operation. The only surface where it is reasonable to expose the full control set.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Attention</p>
+                <div class="feed-card">
+                    <h2>What should never demand attention</h2>
+                    <p>The sharper half of the question is not what each surface shows &mdash; it is what none of them should interrupt for. Three decisions across these products answer it the same way.</p>
+                    <p>Pack Track never sends a notification, even though shipment status is exactly the kind of data products usually push. LE sits idle and silent until addressed, animating only with intent. Visualizer&rsquo;s canvas has no persistent chrome, so nothing on screen is competing with the thing the user came to look at.</p>
+                    <p>The common thread is that each product had an obvious reason to interrupt and chose not to. Deciding what a product will not do is harder to show in a portfolio than a feature list, but on small and ambient surfaces it is most of the design work.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Status</p>
+                <div class="feed-card">
+                    <h2>Shipped versus concept</h2>
+                    <p>Everything in this case study is built and running, with one exception noted below.</p>
+                    <div class="ledger">
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Reflex-o, Fibber, Moodbeat &mdash; Apple Watch</h4>
+                                <p>All three on the App Store. Built May to June 2025, solo.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Pack Track, Motion Lab, Pod &mdash; Flipper Zero</h4>
+                                <p>All three complete; Pack Track open-sourced on GitHub.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Visualizer &mdash; web</h4>
+                                <p>Live and in use at visualizerwebsite.com since 2024, with ongoing releases.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-building">In development</span>
+                            <div class="ledger-body">
+                                <h4>Visualizer &mdash; iOS and macOS ports</h4>
+                                <p>Swift ports sharing the effect catalogue with the web build. Layouts and input models are designed; the ports are not yet released.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <section class="project-cta">
+            <h2>Next: inputs beyond the pointer</h2>
+            <a href="../index.html#case-studies" class="btn-primary">
+                All Case Studies
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/demonte-walker-83506017b/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/thecoolguy2001" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:demontewalker12@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy;2026 Demonté Walker. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <title>Designing for Ambient Intelligence | Demonté Walker</title>
+    <meta name="description" content="A case study on how an assistant should communicate, request permission and give feedback without relying on a screen — across LE, Moodbeat and Pack Track.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="project-styles.css">
+    <link rel="stylesheet" href="case-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="project-nav">
+        <a href="../index.html#case-studies" class="project-nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back
+        </a>
+        <a href="../index.html" class="project-nav-logo">
+            <img src="../portfolio_logo.png" alt="DW Logo">
+        </a>
+        <div style="width: 60px;"></div>
+    </nav>
+
+    <main class="project-page">
+        <!-- Hero -->
+        <section class="project-hero">
+            <p class="project-hero-label">Case Study 01</p>
+            <h1 class="project-hero-title">Designing for Ambient Intelligence</h1>
+            <p class="project-hero-subtitle">How an assistant communicates, asks permission and gives feedback when there is no screen to lean on &mdash; and why the default state should be quiet.</p>
+        </section>
+        <div class="project-glance">
+            <div class="glance-item">
+                <h4>The question</h4>
+                <p>What does an interface look like when nobody is looking at it? A device sitting in a room competes with the room, and most assistants solve that by interrupting.</p>
+            </div>
+            <div class="glance-item">
+                <h4>The position</h4>
+                <p>Attention is the scarce resource, not screen space. Default to silence, make the system&rsquo;s current state continuously visible, and keep detail behind a request instead of on the surface.</p>
+            </div>
+            <div class="glance-item">
+                <h4>Where it stands</h4>
+                <p>Two shipped products put parts of this into practice. The full assistant, LE, is in active development and has not been user-tested yet.</p>
+            </div>
+        </div>
+        <div class="project-feed">
+            <article class="feed-entry">
+                <p class="feed-date">The question</p>
+                <div class="feed-card">
+                    <h2>An assistant that competes with the room</h2>
+                    <p>Alexa, Google Home and Siri all live inside walled gardens, send most queries to the cloud, cannot see or reason about their surroundings, and cannot carry out multi-step tasks on their own. That is the capability gap, and it is the one everyone writes about.</p>
+                    <p>The design gap is different and less discussed. A device in a living room is not competing with other apps for a slot on a screen &mdash; it is competing with the room. With conversation, with the television, with someone reading. An assistant that handles that badly is not annoying because it is unintelligent. It is annoying because it keeps deciding, on its own, that it is the most important thing present.</p>
+                    <p>So the question driving LE was not <em>what can it do</em>. It was: what should it look and sound like for the ninety-nine percent of the time nobody is addressing it?</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Interaction flow</p>
+                <div class="feed-card">
+                    <h2>Where the request goes, and letting the user see it</h2>
+                    <p>LE runs a local language model and a local vision model on a Raspberry Pi, and escalates harder requests to a cloud model. The routing decision is the interesting part: most assistants hide it, because the honest version is an admission that the request left the house.</p>
+                    <div class="user-flow">
+                        <div class="flow-step">
+                            <span class="flow-step-num">01</span>
+                            <h4>Speak</h4>
+                            <p>A wake word opens the microphone. Until then the mic is not listening for content.</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="flow-step-num">02</span>
+                            <h4>Route</h4>
+                            <p>The on-device model takes the request first. For most everyday queries, nothing leaves the Pi.</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="flow-step-num">03</span>
+                            <h4>See</h4>
+                            <p>If the request needs sight, the local vision model reads the Camera Module 3 feed.</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="flow-step-num">04</span>
+                            <h4>Escalate</h4>
+                            <p>Multi-step or domain-specific requests hand off to a cloud model, and the face shows it.</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="flow-step-num">05</span>
+                            <h4>Respond</h4>
+                            <p>Voice plus a face animation deliver the answer and return to idle.</p>
+                        </div>
+                    </div>
+                    <p class="feed-note">Showing the routing step is a deliberate cost. It makes the system look less magical and more mechanical. The trade seemed worth it: a privacy-conscious user cannot trust a boundary they are never shown.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Permission</p>
+                <div class="feed-card">
+                    <h2>Consent without a dialog box</h2>
+                    <p>On a screen, permission is a solved pattern: a modal appears, the user taps Allow, and the decision is recorded. Ambient devices have no good modal. There is no natural moment to interrupt, and a voice prompt asking &ldquo;may I use the camera?&rdquo; before every request would be unusable within a day.</p>
+                    <p>LE&rsquo;s answer is to replace the one-time prompt with a persistent state. When the camera is active, the face shows it. When a request is being handled in the cloud rather than on-device, the face shows that too. Permission stops being an event the user has to remember agreeing to, and becomes a property of the device they can check at a glance, the way a lit stove tells you it is on.</p>
+                    <p>The same principle appears on a surface that <em>does</em> have a screen. Visualizer asks for camera, microphone and Apple Music access inside the app, with an explanation, before the browser-level prompt fires &mdash; so the user is deciding with context rather than reacting to a system dialog. Different mechanism, same rule: the user should understand why before they are asked to grant.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Design decisions</p>
+                <div class="feed-card">
+                    <h2>Four rules for a device that mostly sits there</h2>
+                    <p>LE has two display surfaces: an expressive face and a mirror view carrying ambient information. The hard part is making them read as one character rather than two unrelated screens.</p>
+                    <div class="design-decisions">
+                        <div class="decision-card">
+                            <h4>Quiet by default</h4>
+                            <p>The idle state is a calm face on a black background. LE animates with intent, never continuously. Ambient motion in a room reads as a demand for attention whether or not it is meant as one.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Privacy as a visible state</h4>
+                            <p>Camera on, cloud in use &mdash; both are shown on the face rather than buried in a settings screen. If the user has to open something to find out what the device is doing, the device is not being honest.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>Personality, not anatomy</h4>
+                            <p>Eyes, a mouth and small motion convey state. Nothing realistic. Abstraction lets people project warmth onto LE without crossing into the uncanny valley, and it keeps the face legible at a distance.</p>
+                        </div>
+                        <div class="decision-card">
+                            <h4>A glance, not a dashboard</h4>
+                            <p>Mirror mode carries time, weather and a maximum of two information cards, sized for arm&rsquo;s-length reading. A third card was cut: at glance distance, density is the thing that breaks the read.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Feedback</p>
+                <div class="feed-card">
+                    <h2>Output that does not need to be read</h2>
+                    <p>If an assistant should not demand a screen, it needs channels that work at the edge of attention. Two shipped products test this directly.</p>
+                    <p><strong>Moodbeat</strong> maps heart rate and heart-rate variability to an emotional spectrum rendered as a single animated colour ring. There are no labels and no charts &mdash; hue carries the message. The ring also breathes: slow oscillation in calm states, faster pulse in agitated ones, so the motion echoes the physiology instead of decorating it. The ring occupies nearly the whole screen and the supporting elements are pushed to the edges, so the eye lands on colour first and context second. Colour choices were tested with real users for emotional resonance before shipping.</p>
+                    <p><strong>Reflex-o</strong> goes further and makes the primary feedback channel tactile. Correct and incorrect answers carry distinct haptic signatures, so the wrist reports the result before the eyes catch up. On a screen that small, haptics are not an enhancement layered on top of the visual &mdash; they are the fastest channel available, and the visual is the backup.</p>
+                    <p><strong>Pack Track</strong> is the restraint case. It is a shipment tracker on a Flipper Zero that deliberately does not notify. Status sits in a glanceable list on a small monochrome display, readable at arm&rsquo;s length on a desk, offline by default. The entire premise is that checking a package is not worth an interruption &mdash; so the product never initiates one.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Accessibility</p>
+                <div class="feed-card">
+                    <h2>What this approach gets right, and what it does not</h2>
+                    <p>Designing away from screens helps some users and hurts others, and it is worth being specific about which.</p>
+                    <p>It helps where a channel is added rather than swapped. Reflex-o&rsquo;s distinct haptic patterns mean the game is playable without reading anything mid-round. LE&rsquo;s voice-first flow removes the need to see a UI to operate it, and the mirror&rsquo;s low density and large type are chosen for distance, which also serves low vision.</p>
+                    <p>It hurts where a channel is the only one. Moodbeat currently encodes its entire output in hue, which is exactly the failure mode colour-blind users run into &mdash; an eighth of men cannot reliably separate the ends of a red-to-green spectrum. The honest status is that this is unresolved rather than handled: the fix is a redundant encoding, most likely pulse rate or an optional text read-out, so the ring is never the sole carrier of meaning. The same applies to LE, where state is currently shown through the face alone.</p>
+                    <p>The rule the two cases produce: an ambient channel should be allowed to be the <em>fastest</em> way to understand what is happening, but never the only way.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">Status</p>
+                <div class="feed-card">
+                    <h2>Shipped versus concept</h2>
+                    <p>These projects sit at different stages, and the case study would be misleading without saying which is which.</p>
+                    <div class="ledger">
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Moodbeat &mdash; Apple Watch</h4>
+                                <p>On the App Store. Colour-to-emotion mapping validated with real users; the colour-blindness gap above is open.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Reflex-o &mdash; Apple Watch</h4>
+                                <p>On the App Store. Haptic-first feedback and voice prompts built and refined across iterations.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-shipped">Shipped</span>
+                            <div class="ledger-body">
+                                <h4>Pack Track &mdash; Flipper Zero</h4>
+                                <p>Shipped and open-sourced. Config parsing and field extraction tested on the host before touching the device.</p>
+                            </div>
+                        </div>
+                        <div class="ledger-row">
+                            <span class="ledger-state is-building">In development</span>
+                            <div class="ledger-body">
+                                <h4>LE &mdash; Raspberry Pi assistant</h4>
+                                <p>Started April 2026. Hardware, routing layer and local model stack are being built. The face and mirror UIs exist as design direction and wireframes, not as a tested interface &mdash; no usability testing has happened yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="feed-note">The permission and quiet-by-default thinking on LE is a position, not a validated result. It is written here as a hypothesis to be tested once the device is far enough along to put in front of someone.</p>
+                </div>
+            </article>
+        </div>
+
+        <section class="project-cta">
+            <h2>Next: what belongs on which device</h2>
+            <a href="../index.html#case-studies" class="btn-primary">
+                All Case Studies
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/demonte-walker-83506017b/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/thecoolguy2001" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="mailto:demontewalker12@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+                </a>
+            </div>
+            <p class="footer-copyright">&copy;2026 Demonté Walker. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
