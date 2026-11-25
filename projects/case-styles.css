@@ -37,6 +37,14 @@
     color: var(--color-gray-500);
 }
 
+/* The author speaking in the first person. These blocks exist to break the
+   register of the analysis around them, so they are styled as an aside
+   rather than as another section of the argument. */
+.feed-card-me {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+}
+
 /* Shipped-versus-concept ledger ---------------------------------- */
 
 .ledger {

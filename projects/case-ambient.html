@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <title>Designing for Ambient Intelligence | Demonté Walker</title>
+    <title>A Device That Mostly Sits There | Demonté Walker</title>
     <meta name="description" content="A case study on how an assistant should communicate, request permission and give feedback without relying on a screen — across LE, Moodbeat and Pack Track.">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project-styles.css">
@@ -30,8 +30,8 @@
         <!-- Hero -->
         <section class="project-hero">
             <p class="project-hero-label">Case Study 01</p>
-            <h1 class="project-hero-title">Designing for Ambient Intelligence</h1>
-            <p class="project-hero-subtitle">How an assistant communicates, asks permission and gives feedback when there is no screen to lean on &mdash; and why the default state should be quiet.</p>
+            <h1 class="project-hero-title">A Device That Mostly Sits There</h1>
+            <p class="project-hero-subtitle">How an ambient device communicates, asks permission and gives feedback when there is no screen to lean on, and why its default state should be quiet.</p>
         </section>
         <div class="project-glance">
             <div class="glance-item">
@@ -143,7 +143,15 @@
                     <p>Designing away from screens helps some users and hurts others, and it is worth being specific about which.</p>
                     <p>It helps where a channel is added rather than swapped. Reflex-o&rsquo;s distinct haptic patterns mean the game is playable without reading anything mid-round. LE&rsquo;s voice-first flow removes the need to see a UI to operate it, and the mirror&rsquo;s low density and large type are chosen for distance, which also serves low vision.</p>
                     <p>It hurts where a channel is the only one. Moodbeat currently encodes its entire output in hue, which is exactly the failure mode colour-blind users run into &mdash; an eighth of men cannot reliably separate the ends of a red-to-green spectrum. The honest status is that this is unresolved rather than handled: the fix is a redundant encoding, most likely pulse rate or an optional text read-out, so the ring is never the sole carrier of meaning. The same applies to LE, where state is currently shown through the face alone.</p>
-                    <p>The rule the two cases produce: an ambient channel should be allowed to be the <em>fastest</em> way to understand what is happening, but never the only way.</p>
+                    <p>What I take from those two cases: an ambient channel can be the <em>fastest</em> way to understand what is happening. It should never be the only way.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">One I got wrong</p>
+                <div class="feed-card feed-card-me">
+                    <h2>The contradiction in my own work</h2>
+                    <p>There is a contradiction in here and I would rather name it than have someone find it. Half of this argues that a device should make its state visible so you never have to guess what it is doing. Then there is Moodbeat, which I shipped, where the entire output is a colour. If you cannot separate red from green you get nothing out of it.</p>
+                    <p>That gap is still open. The fix is not complicated, just a second channel so the ring is not the only thing carrying the meaning, probably pulse rate so it still works without labels. I have not shipped it yet. LE has the same shape of problem, where state lives on the face and nowhere else, so this is a habit of mine and not a one-off.</p>
                 </div>
             </article>
             <article class="feed-entry">
@@ -187,7 +195,7 @@
         </div>
 
         <section class="project-cta">
-            <h2>Next: what belongs on which device</h2>
+            <h2>Next: what belongs on a watch</h2>
             <a href="../index.html#case-studies" class="btn-primary">
                 All Case Studies
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

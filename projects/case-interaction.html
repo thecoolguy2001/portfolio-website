@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <title>Exploring New Forms of Interaction | Demonté Walker</title>
+    <title>Which Inputs Earned Their Place | Demonté Walker</title>
     <meta name="description" content="A case study on audio, voice, motion, biometric and AR input — which genuinely improved usability and which only added complexity, across Visualizer, Reflex-o, Motion Lab and Fibber.">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="project-styles.css">
@@ -30,7 +30,7 @@
         <!-- Hero -->
         <section class="project-hero">
             <p class="project-hero-label">Case Study 03</p>
-            <h1 class="project-hero-title">Exploring New Forms of Interaction</h1>
+            <h1 class="project-hero-title">Which Inputs Earned Their Place</h1>
             <p class="project-hero-subtitle">Audio, voice, motion and biometrics as inputs &mdash; which of them genuinely made an interface easier to use, and which ones only added a layer to explain.</p>
         </section>
         <div class="project-glance">
@@ -74,6 +74,14 @@
                     <p>If a user begins a recording without ever having pressed spacebar, the recording captures empty audio and fails quietly. No error, no obvious cause, just a dead file. That is a textbook usability failure &mdash; an invisible precondition with a delayed, silent consequence.</p>
                     <p>The fix ended up being three layers of explanation: the requirement is called out in the H controls overlay, repeated in the manual, and a warning now fires inline when a recording starts from an uninitialised context. Three places is not elegant. A design that needs to be documented three times is telling you something.</p>
                     <p>The honest read is that this is a platform constraint dressed up as a design decision. The spacebar press doubles as the audio init, which is tidy framing &mdash; but it is tidy framing applied after the fact to a requirement the user never asked for and cannot see. It is the one place in the project where the interface asks the user to absorb a technical detail, and it has cost more support surface than any feature.</p>
+                </div>
+            </article>
+            <article class="feed-entry">
+                <p class="feed-date">What I would fix first</p>
+                <div class="feed-card feed-card-me">
+                    <h2>I patched it instead of designing it</h2>
+                    <p>That audio-context problem is the one I am least happy with, and I want to be exact about what I actually did about it. I did not redesign the start flow. I added an inline warning and wrote the requirement down in two more places. That is a patch. It stops the silent failure, which was the urgent part, but the precondition the user cannot see is still sitting there.</p>
+                    <p>If I went back to one thing in Visualizer it would be this, and doing it properly means the recording path setting up its own audio rather than depending on something the user did on a screen two steps earlier. I know what the fix is. I shipped documentation instead, because documentation took an afternoon.</p>
                 </div>
             </article>
             <article class="feed-entry">
