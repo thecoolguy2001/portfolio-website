@@ -275,7 +275,7 @@ const projectData = {
         role: "Designer / Embedded Developer",
         timeline: "October 2026",
         tools: "C, Flipper Zero SDK, ESP-IDF, ESP32-S2, UART, ufbt, GitHub",
-        link: "https://github.com/thecoolguy2001/flipper-wifi-radio",
+        link: "https://lab.flipper.net/apps/flipper_wifi_radio",
         page: "projects/wifiradio.html",
         summary: "Flipper WiFi Radio turns a Flipper Zero and an ESP32-S2 devboard into a pocket radio station. Pick an MP3 off the SD card and the Flipper paces it over UART to the devboard, which broadcasts its own WiFi network and re-serves the audio as a live stream. Up to eight people nearby join, get handed a player page by the captive portal, and hear the same moment at the same time with nothing to install.",
         problem: "Playing music for people around you has bad options. A speaker fills the room whether everyone wants it or not, Bluetooth pairs to one device, and anything that syncs playback across phones needs every person to install the same app and sign in. Meanwhile every phone already contains a perfectly good audio player that needs no installation: its browser.",
