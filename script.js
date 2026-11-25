@@ -312,13 +312,13 @@ const projectData = {
         title: "LE",
         subtitle: "Local AI Agentic Bot",
         role: "Founder / Hardware & Software Developer / Designer",
-        timeline: "April 14, 2026 → Present",
+        timeline: "April 14, 2026 → May 30, 2026",
         tools: "Raspberry Pi, Camera Module 3, Local LLM, Local Vision LLM, Cloud AI, Python, USB Microphone, USB Speaker",
         page: "projects/le.html",
         summary: "LE is a Raspberry Pi-based local AI agentic bot designed to be a smarter home assistant. It runs a locally-downloaded LLM on-device alongside a local visual LLM for camera-based intelligence, with a face UI and mirror UI for ambient interaction. More demanding requests can be routed to a cloud AI of choice, giving LE the breadth of cloud assistants without sacrificing the privacy and immediacy of on-device processing.",
         problem: "Today's home assistants (Alexa, Google Home, Siri) are limited. They live in walled-garden ecosystems, send most queries to the cloud, can't see or reason about their environment, and can't perform agentic multi-step tasks. There's no easily-extensible home assistant that combines local privacy, vision, and the ability to act as a true agent.",
         solution: "LE pairs a Raspberry Pi with a Camera Module 3, USB microphone, and USB speaker to handle input/output. A local LLM handles everyday queries on-device; a local vision LLM gives LE visual intelligence through the camera. A routing system escalates more demanding commands to a cloud AI of choice. The interface mixes a face UI for personality with a mirror UI for at-a-glance information.",
-        learned: "This project is just getting started (work began April 14, 2026), and I'll be adding more in-depth details soon as the system matures, including specifics on the local model stack, vision pipeline, agent loop, and hardware build."
+        learned: "Built between April 14 and May 30, 2026. The design problem turned out to be attention rather than capability: a device sitting in a room competes with the room, so LE defaults to a quiet idle state and shows what it is doing \u2014 camera on, cloud in use \u2014 on its face rather than behind a settings screen."
     },
     thirtyforthirty: {
         title: "#30for30",
