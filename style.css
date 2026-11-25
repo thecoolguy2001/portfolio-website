@@ -938,6 +938,14 @@ button {
     opacity: 1;
 }
 
+/* A cover on a card that has no hover video still fills the 16:10 frame, so
+   it sits flush with the video-backed cards beside it. */
+.project-image > .project-cover.is-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-placeholder {
     width: 100%;
     height: 100%;
