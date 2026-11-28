@@ -32,7 +32,7 @@ const projectData = {
         learned: "Coral Gala taught me how to blend ambient design with multiplayer systems. I learned the power of shared digital spaces and how to give users just enough control to make them feel connected."
     },
     oldyorktimes: {
-        title: "Old York Times",
+        title: "The Pulp",
         subtitle: "Publication Website",
         role: "Web Developer / UI/UX Designer",
         timeline: "June 10, 2024 → September 28, 2025",
