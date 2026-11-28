@@ -39,7 +39,7 @@ const projectData = {
         tools: "CSS, HTML, JS, Webflow",
         link: "https://oldyorktimes.com",
         page: "projects/oldyorktimes.html",
-        summary: "The development of the Old York Times website was built to evoke the timeless charm of pulp fiction and classic journalism, the Old York Times website redefines news delivery for modern audiences. Designed to engage users with both current news and fictional stories, the site blends a nostalgic aesthetic with modern interactive features.",
+        summary: "The development of The Pulp was built to evoke the timeless charm of pulp fiction and classic journalism, redefining news delivery for modern audiences. Designed to engage users with both current news and fictional stories, the site blends a nostalgic aesthetic with modern interactive features.",
         problem: "Looking at current news and article sites, they seem to have become less expressive and creative for users, with some even added unwanted complexity to its site design.",
         solution: "The solution involved developing the site as a unique platform that merges the timeless look of vintage newspapers with contemporary digital design. By integrating retro typography, layout elements reminiscent of retro designs, and modern interactive features.",
         learned: "This project deepened my understanding of how to integrate historical design elements with contemporary technology. I learned the importance of iterative design and user feedback in creating a product that is both authentic and functional."
